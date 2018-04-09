@@ -40,7 +40,7 @@ export default {
 
 .the-header {
   width: 100%;
-  position: fixed;
+  position: relative;
   height: 80px;
   display: flex;
   justify-content: space-around;
@@ -68,7 +68,7 @@ export default {
 
 .navigation-items {
   display: none;
-  flex: 4;
+  flex: 7;
 }
 
 @media (min-width: 768px) {
@@ -91,6 +91,7 @@ export default {
 }
 
 .nav-item a {
+  position: relative;
   text-decoration: none;
   color: black;
 }
@@ -98,6 +99,29 @@ export default {
 .nav-item a:hover,
 .nav-item a:active,
 .nav-item a.nuxt-link-active {
-  color: red;
+  color: #b87333;
 }
+
+.nav-item > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-item > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
 </style>

@@ -25,26 +25,6 @@
        style="font-size:12.50111485px;fill:#b87333;fill-opacity:1;stroke-width:0.9852407"
        id="path1563" />
   </g>
-  <flowRoot
-     style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:12px;line-height:1.25;letter-spacing:0px;word-spacing:0px"
-     id="flowRoot1480"
-     xml:space="preserve"><flowRegion
-       id="flowRegion1482"><rect
-         y="-34.471184"
-         x="-17.665684"
-         height="139.71951"
-         width="309.95245"
-         id="rect1484" /></flowRegion><flowPara
-       id="flowPara1486" /></flowRoot>  <flowRoot
-     style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:12px;line-height:1.25;letter-spacing:0px;word-spacing:0px"
-     id="flowRoot1488"
-     xml:space="preserve"><flowRegion
-       id="flowRegion1490"><rect
-         y="-36.077156"
-         x="-3.2119427"
-         height="105.99411"
-         width="285.86288"
-         id="rect1492" /></flowRegion><flowPara
-       id="flowPara1494" /></flowRoot></svg>
+</svg>
 
 </template>
