@@ -5,7 +5,7 @@
     <div class="logo">
      <logo2/>
     </div>
-    <div class="spacer"></div>
+   
     <div class="navigation-items">
       <ul class="nav-list">
         <li class="nav-item"><nuxt-link to="/posts">About us</nuxt-link></li>
@@ -15,6 +15,7 @@
         <li class="nav-item"><nuxt-link to="/admin">Contact us</nuxt-link></li>
       </ul>
     </div>
+    <div class="spacer"></div>
   </header>
 </div>
 </template>
@@ -55,6 +56,7 @@ export default {
 .logo {
   margin: 0 10px;
   font-size: 1.3rem;
+  flex: 1 0 20%;
 }
 
 .logo a {
@@ -63,12 +65,14 @@ export default {
 }
 
 .spacer {
-  flex: 1;
+  flex: 1 0 20%;
 }
 
 .navigation-items {
   display: none;
-  flex: 7;
+
+    
+
 }
 
 @media (min-width: 768px) {
