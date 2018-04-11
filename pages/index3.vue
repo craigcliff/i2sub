@@ -3,8 +3,8 @@
  <section class="container3">
   
      <div class ="slider-info">
-       <span class="dot" v-on:click="first" >01</span>
-       <div class="vl"></div>
+     <span class="dot" v-on:click="first">01</span>
+  <div class="vl"></div>
   <span class="dot" v-on:click="middle">02</span>
   <div class="vl"></div>
   <span class="dot" v-on:click="last">03</span>

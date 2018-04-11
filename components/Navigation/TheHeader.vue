@@ -22,7 +22,7 @@
 
 <script>
 import TheSideNavToggle from "@/components/Navigation/TheSideNavToggle"
-import Logo2 from '~/components/Navigation/Logo.vue'
+import Logo2 from '~/components/Logo2.vue'
 
 export default {
   name: "TheHeader",
