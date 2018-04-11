@@ -3,9 +3,9 @@
 
 <svg
 
-     width="300.60522"
-   height="600.902023"
-   viewBox="85 65 100 140">
+     width="350.60522"
+   height="300.902023"
+   viewBox="85 85 100 100">
   <defs
      id="defs2148">
     <clipPath

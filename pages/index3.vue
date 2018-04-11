@@ -3,11 +3,11 @@
  <section class="container3">
   
      <div class ="slider-info">
-     <span class="dot" v-on:click="first">01</span>
+     <span class="dot dot1" v-on:click="first">01</span>
   <div class="vl"></div>
-  <span class="dot" v-on:click="middle">02</span>
+  <span class="dot dot2" v-on:click="middle">02</span>
   <div class="vl"></div>
-  <span class="dot" v-on:click="last">03</span>
+  <span class="dot dot3" v-on:click="last">03</span>
  
          <h1 class ="slider-heading1"> Sample Heading </h1>
          <h3 class ="slider-desc1">More Sample Text</h3>
@@ -78,6 +78,12 @@ background-color:  #dde6ef;
   top: -15px;
  text-align: center;
  color:grey;
+}
+
+.dot1 {
+
+    
+
 }
 
 .vl {
@@ -246,15 +252,17 @@ width: 85%;
       mounted(){
 
 this.menuToggle
-  
-         .to('.slider-image',2, {x:-20,autoAlpha:1,display:"block"},'first')
+
+    
+         .to('.dot1', 0.5,  {fontWeight: 1000,color: "#b87333"},'first')
+         .to('.slider-image',2, {x:-20,autoAlpha:1,display:"block"})
        
         .to('.slider-heading1',0.5,{y:-50, autoAlpha: 1, ease:Power3.easeIn},'-=1')
          .to('.slider-desc1',0.6,{y:-50, autoAlpha: 1,  ease:Power3.easeIn},'-=1')
          .to('.slider-image',0.7, {autoAlpha:0,display:"none", delay:7},'-=2')
          .to('.slider-heading1',0.3,{y:-10, autoAlpha: 0},'-=0.7')
          .to('.slider-desc1',0.3,{y:-10, autoAlpha: 0},'-=0.7')
-
+         .to('.dot1', 0.5,  {color: "grey"})   
  .to('.slider-image2',2, {x:-20,autoAlpha:1,display:"block"},'middle')
        
         .to('.slider-heading2',0.5,{y:-50, autoAlpha: 1, ease:Power3.easeIn},'-=1')
@@ -275,20 +283,7 @@ this.menuToggle
          ;
 
        
-         if (this.menuToggle.play('first')){
-
-            console.log("first")
-         }
-            else if (this.menuToggle.play('middle'))
-            {
-
-            console.log("middle")
-         }
-else if (this.menuToggle.play('last'))
-            {
-
-            console.log("last")
-         }
+    
 
 
       },
