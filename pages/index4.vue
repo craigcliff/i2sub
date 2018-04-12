@@ -3,25 +3,28 @@
  <section class="container3">
   
      <div class ="slider-info">
+       <div class ="slider-dot-container">
      <span class="dot slider1-dot " v-on:click="first">01</span>
   <div class="vl"></div>
   <span class="dot slider2-dot " v-on:click="middle">02</span>
   <div class="vl"></div>
   <span class="dot slider3-dot " v-on:click="last">03</span>
- 
-         <h1 class ="slider1-heading"> Sample Heading </h1>
-         <h3 class ="slider1-desc">More Sample Text</h3>
+</div>
+
+  <div class="slider-heading-main">
+         <h1 class ="slider1-heading"> Who we are </h1>
+         <h5 class ="slider1-desc">Specialists in geotechnical solutions</h5>
     <div class = "slider1-btn"> <buttonMain/> </div>
-         <h1 class ="slider2-heading"> Sample Heading2 </h1>
-         <h3 class ="slider2-desc">More Sample Text2</h3>
+         <h1 class ="slider2-heading"> Worldwide Strength with local focus </h1>
+         <h3 class ="slider2-desc">Creating infrastructure that improves the world’s communities</h3>
            <div class = "slider2-btn"> <buttonMain/> </div>
-         <h1 class ="slider3-heading"> Sample Heading3 </h1>
-         <h3 class ="slider3-desc">More Sample Tex3</h3>
+         <h1 class ="slider3-heading"> What we do </h1>
+         <h3 class ="slider3-desc">We solve geotechnical challenges spanning entire construction spectrums</h3>
           <div class = "slider3-btn"> <buttonMain/> </div>
          </div>
-
-          
-      </div>   
+</div>
+         </div> 
+ 
        
         
          
@@ -29,7 +32,7 @@
      <div class ="slider-image-container"> 
          <div class ="slider1-image"> </div>
         <div class ="slider2-image"> </div>
-
+<div class ="slider3-image"> </div>
 
      </div>
 
@@ -73,58 +76,81 @@ background-color:  #dde6ef;
   width: 25px;
   background-color: transparent;
   border-radius: 50%;
-  display: inline-block;
+  align-self:flex-start; 
+  /* display: inline-block;
   padding-top: 25px;
   padding-bottom:10px;
-  position:relative;
+ 
   left: -150px;
-  top: -15px;
- text-align: center;
+  top: -15px; */
+
 
 }
 
 .slider1-dot {
 
-    fontWeight: 200;
+    font-Weight: 200;
 color:grey;
 }
 .slider2-dot {
 
-    fontWeight: 200;
+    font-Weight: 200;
 color:grey;
 }
 .slider3-dot {
 
-    fontWeight: 200;
+    font-Weight: 200;
 color:grey;
 }
 .vl {
     border-left: 1px solid grey;
     height: 70px;
-    position:relative;
-  left: -137px;
-  padding-top:4px;
+    margin-left: 8px;
+    margin-bottom: 4px;
+  /* left: -137px;
+  padding-top:4px; */
 }
 
 .slider-info{
 
 flex: 1 0 50%;
 display: flex;
-flex-direction: column;
-padding-left: 200px;
+flex-direction: row;
+padding-left: 60px;
 justify-content: center;
 
+
   
-  
+  }
+
+.slider-dot-container{
+
+width: 20%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+
+}
   
 
+
+
+.slider-heading-main{
+flex: 1 0 20%;
+height: 100%;
+
+display: flex;
 }
 
 
 .slider1-heading{
-font-size: 50px;
+font-size: 42px;
 position: absolute;
 top:250px;
+max-width: 300px;
+
 
 opacity: 0;
 
@@ -134,10 +160,12 @@ opacity: 0;
 }
 
 .slider1-desc{
+  
 
-font-size: 30px;
+font-size: 25px;
 position: absolute;
 top:330px;
+font-weight: 200;
 
 opacity: 0;
 
@@ -152,10 +180,11 @@ opacity: 0;
 }
 
 .slider2-heading{
-font-size: 50px;
+font-size: 42px;
 position: absolute;
 top:250px;
 opacity: 0;
+max-width: 500px;
 
 
 
@@ -163,12 +192,12 @@ opacity: 0;
 
 .slider2-desc{
 
-font-size: 30px;
+font-size: 25px;
 position: absolute;
-top:330px;
+top:360px;
 opacity: 0;
-
-
+max-width: 500px;
+font-weight: 200;
 
 
 
@@ -176,15 +205,16 @@ opacity: 0;
 
 .slider2-btn{
 position: absolute;
-top:400px;
+top:440px;
 opacity: 0;
 }
 
 .slider3-heading{
-font-size: 50px;
+font-size: 42px;
 position: absolute;
 top:250px;
 opacity: 0;
+max-width: 500px;
 
 
 
@@ -192,10 +222,13 @@ opacity: 0;
 
 .slider3-desc{
 
-font-size: 30px;
+font-size: 25px;
 position: absolute;
 top:330px;
 opacity: 0;
+max-width: 500px;
+font-weight: 200;
+
 
 
 
@@ -203,7 +236,7 @@ opacity: 0;
 
 .slider3-btn{
 position: absolute;
-top:400px;
+top:420px;
 opacity: 0;
 }
 .slider-image-container{
@@ -214,7 +247,7 @@ flex: 1 0 50%;
 
 .slider1-image{
    
-background-image: url("~/assets/bg3.jpg"); 
+background-image: url("~/assets/bg1.jpg"); 
 background-position: 50% 50%; 
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -245,6 +278,21 @@ width: 85%;
 
 }
 
+.slider3-image{
+   
+background-image: url("~/assets/bg5.jpg"); 
+background-position: 50% 50%; 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+margin-top: 60px;
+margin-left:60px;
+height: 100%;
+width: 85%;
+ visibility:hidden;
+ display: none;
+
+
+}
     
 </style>
 
