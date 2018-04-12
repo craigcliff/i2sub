@@ -75,6 +75,7 @@ export default {
 
 }
 
+
 @media (min-width: 768px) {
   .navigation-items {
     display: block;
@@ -98,6 +99,8 @@ export default {
   position: relative;
   text-decoration: none;
   color: black;
+  font-size:14px;
+  font-weight:500;
 }
 
 .nav-item a:hover,
