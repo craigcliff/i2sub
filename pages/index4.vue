@@ -307,7 +307,8 @@ tl: new TimelineMax({
   
           reversed: false,
           repeat: -1,
-          repeatDelay:1
+          repeatDelay:1,
+          yoyo:true
   
         })
 
@@ -363,17 +364,17 @@ this.master
 
             createPanel: function(panel) {
 
- this.tl.to(panel + '-dot', 0.5,  {fontWeight: 1000,color: "#b87333"})
-         .to(panel +'-image',2, {x:-20,autoAlpha:1,display:"block"})
+ this.tl.to(panel + '-dot',0,  {fontWeight: 1000,color: "#ff7f2a"})
+         .to(panel +'-image',1, {x:-20,autoAlpha:1,display:"block"})
        
-        .to(panel + '-heading',0.5,{y:-50, autoAlpha: 1, ease:Power3.easeIn},'-=1')
-         .to(panel + '-desc',0.6,{y:-50, autoAlpha: 1,  ease:Power3.easeIn},'-=1')
-         .to(panel + '-btn',0.6,{y:-50, autoAlpha: 1,  ease:Power3.easeIn},'-=1')
-          .to(panel + '-image',0.7, {autoAlpha:0,display:"none", delay:7},'-=2')
-         .to(panel + '-heading',0.3,{y:-10, autoAlpha: 0},'-=0.7')
-         .to(panel + '-desc',0.3,{y:-10, autoAlpha: 0},'-=0.7')
-         .to(panel + '-btn',0.3,{y:-10, autoAlpha: 0},'-=0.7')
-         .set(panel + '-dot', {clearProps:"all"})
+        .to(panel + '-heading',.5,{y:-10, autoAlpha: 1, ease:Linear.easeOutIn})
+         .to(panel + '-desc',1,{y:-10, autoAlpha: 1,  ease:Linear.easeOutIn})
+         .to(panel + '-btn',1.5,{y:-10, autoAlpha: 1,  ease:Linear.easeOutIn})
+          .to(panel + '-image',-0.5, {autoAlpha:0,display:"none", delay:7})
+         .to(panel + '-heading',0.4,{y:-10, autoAlpha: 0, ease:Back.easeInOut})
+         .to(panel + '-desc',0.8,{y:-10, autoAlpha: 0, ease:Back.easeInOut})
+         .to(panel + '-btn',1.3,{y:-10, opacity:0, autoAlpha: 0, ease:Back.easeInOut})
+         .set(panel + '-dot', {clearProps:"all"},'-=0.5')
        //  .addPause()
          
 
