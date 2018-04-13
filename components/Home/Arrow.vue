@@ -1,9 +1,10 @@
-<template>
+<template >
 
-<div class="container" v-scroll-to="'.services-title'">
-  <div class="chevron" v-scroll-to="'.services-title'"></div>
-  <div class="chevron" v-scroll-to="'.services-title'"></div>
-  <div class="chevron" v-scroll-to="'.services-title'"></div>
+<div class="container" >
+  <div class="chevron" ></div>
+  <div class="chevron" ></div>
+  <div class="chevron" ></div>
+  <button class="btn-click" v-scroll-to="'.services-title'">Testing</button>
 </div>
     
 </template>
@@ -17,7 +18,16 @@
 }
 
 
+.btn-click{
+position: relative;
+top:30px;
+width:100px;
+height:100px;
+opacity:0;
+cursor: pointer; 
 
+
+}
 .chevron {
   position: absolute;
   width: 1.3rem;

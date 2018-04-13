@@ -12,7 +12,7 @@
 
 .container{
 
-height: 20vh;
+height: 22vh;
     display: flex;
     background-color: #eee9e9;
     background-image: #eee9e9;

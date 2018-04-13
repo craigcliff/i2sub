@@ -16,7 +16,7 @@
   font-weight: 600;
   color: #FFFFFF !important;
   font-size: 10px;
-  text-shadow: 1px 1px 0px #18222B;
+  
   box-shadow: 0px 1px 1px #000000;
   padding: 10px 25px;
   border: 2px solid #030508;
@@ -26,6 +26,7 @@
 .testbutton:hover {
   color: rgb(0, 2, 5) !important;
   background: #ff7f2a;
+  cursor: pointer; 
 }
 
 

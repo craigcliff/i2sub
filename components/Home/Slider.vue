@@ -13,15 +13,15 @@
       </div>
   
       <div class="slider-heading-main">
-        <h1 class="slider1-heading"> Who we are </h1>
+        <h1 class="slider1-heading"> Who <span class="wordColorChange">we</span> are </h1>
         <h5 class="slider1-desc">Specialists in geotechnical solutions</h5>
         <div class="slider1-btn">
           <buttonMain/> </div>
-        <h1 class="slider2-heading"> Worldwide Strength with local focus </h1>
+        <h1 class="slider2-heading"> Worldwide <span class="wordColorChange">Strength</span> with local focus </h1>
         <h3 class="slider2-desc">Creating infrastructure that improves the world’s communities</h3>
         <div class="slider2-btn">
           <buttonMain/> </div>
-        <h1 class="slider3-heading"> What we do </h1>
+        <h1 class="slider3-heading"> What we <span class="wordColorChange">do</span> </h1>
         <h3 class="slider3-desc">We solve geotechnical challenges spanning entire construction spectrums</h3>
         <div class="slider3-btn">
           <buttonMain/> </div>
@@ -56,6 +56,12 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f3f3+50,ededed+51,ffffff+100;White+Gloss+%232 */
+  }
+
+  .wordColorChange{
+
+color:#ff7f2a; 
+
   }
   
   .dot {
@@ -121,7 +127,7 @@
   .slider1-heading {
     font-size: 42px;
     position: absolute;
-    top: 250px;
+    top: 290px;
     max-width: 300px;
     opacity: 0;
   }
@@ -129,7 +135,7 @@
   .slider1-desc {
     font-size: 25px;
     position: absolute;
-    top: 330px;
+    top: 350px;
     font-weight: 200;
     opacity: 0;
   }
@@ -166,7 +172,7 @@
   .slider3-heading {
     font-size: 42px;
     position: absolute;
-    top: 250px;
+    top: 260px;
     opacity: 0;
     max-width: 500px;
   }

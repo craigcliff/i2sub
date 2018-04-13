@@ -39,7 +39,7 @@ export default {
 
 
 .header-container {
-  height: 10vh;
+  height: 8vh;
 }
 
 .the-header {
@@ -109,7 +109,7 @@ export default {
 .nav-item a:hover,
 .nav-item a:active,
 .nav-item a.nuxt-link-active {
-  color: #b87333;
+  color: #ff7f2a; ;
 }
 
 .nav-item > a:before {
