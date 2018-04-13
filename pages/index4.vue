@@ -1,6 +1,7 @@
 <template>
   <section class="main">
   <Slider />
+  <Bottom />
   <Services />
   
   </section>
@@ -21,11 +22,13 @@
 
   import Slider from "@/components/Home/Slider.vue"
   import Services from "@/components/Home/Services.vue"
+  import Bottom from "@/components/Home/Bottom.vue"
   
   export default {
     components: {
       Slider,
-      Services
+      Services,
+      Bottom
     },
   
   

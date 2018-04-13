@@ -1,5 +1,7 @@
 <template>
   <section class="container3">
+
+    
   
     <div class="slider-info">
       <div class="slider-dot-container">
@@ -71,22 +73,22 @@
   }
   
   .slider1-dot {
-    font-Weight: 200;
-    color: grey;
+    font-Weight: 400;
+    color: #bfbbbb;
   }
   
   .slider2-dot {
-    font-Weight: 200;
-    color: grey;
+    font-Weight: 400;
+    color: #bfbbbb;
   }
   
   .slider3-dot {
-    font-Weight: 200;
-    color: grey;
+    font-Weight: 400;
+    color: #bfbbbb;
   }
   
   .vl {
-    border-left: 1px solid grey;
+    border-left: 1px solid #c1bdbd;
     height: 70px;
     margin-left: 8px;
     margin-bottom: 4px;
@@ -194,7 +196,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     margin-top: 60px;
-    margin-left: 60px;
+    margin-left: 90px;
     height: 100%;
     width: 85%;
     visibility: hidden;
@@ -207,7 +209,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     margin-top: 60px;
-    margin-left: 60px;
+   margin-left: 90px;
     height: 100%;
     width: 85%;
     visibility: hidden;
@@ -220,7 +222,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     margin-top: 60px;
-    margin-left: 60px;
+    margin-left: 90px;
     height: 100%;
     width: 85%;
     visibility: hidden;
@@ -230,12 +232,15 @@
 
 
 <script>
+
+
   import {
   
     TweenMax
   
   } from "gsap";
-  
+
+  import Text from "gsap/TextPlugin"
   import TimelineMax from "gsap/TimelineMax";
   import buttonMain from "@/components/Layout/button.vue"
   
@@ -304,38 +309,7 @@
   
         .add(this.createPanel(".slider3"), "slide3");
   
-      //this.animation();
-  
-      // this.createPanel(".slider1");
-      // this.createPanel(".slider2");
-      // this.createPanel(".slider3");
-  
-  
-  
-      //       this.animation2 
-      //        .to('.slider-image2',2, {x:-20,autoAlpha:1,display:"block"},'middle')
-      //         .to('.slider-heading2',0.5,{y:-50, autoAlpha: 1, ease:Power3.easeIn},'-=1')
-      //          .to('.slider-desc2',0.6,{y:-50, autoAlpha: 1,  ease:Power3.easeIn},'-=1')
-      //        .to('.slider-image2',0.7, {autoAlpha:0,display:"none", delay:7},'-=2');
-      // //          .to('.slider-heading2',0.3,{y:-10, autoAlpha: 0},'-=0.7')
-      // //          .to('.slider-desc2',0.3,{y:-10, autoAlpha: 0},'-=0.7');
-  
-      // this.animation3 
-      //           .to('.slider-image',2, {x:-20,autoAlpha:1,display:"block"},'end')
-  
-      //        .to('.slider-heading3',0.5,{y:-50, autoAlpha: 1, ease:Power3.easeIn},'-=1')
-      //          .to('.slider-desc3',0.6,{y:-50, autoAlpha: 1,  ease:Power3.easeIn},'-=1')
-      //          .to('.slider-image3',0.7, {autoAlpha:0,display:"none", delay:7},'-=2')
-      //          .to('.slider-heading3',0.3,{y:-10, autoAlpha: 0},'-=0.7')
-      //          .to('.slider-desc3',0.3,{y:-10, autoAlpha: 0},'-=0.7');
-  
-  
-      //.add(this.animation2)
-      //      .add(this.animation3);
-  
-  
-  
-  
+    
   
   
     },
@@ -348,6 +322,8 @@
             fontWeight: 1000,
             color: "#ff7f2a"
           })
+
+          
           .to(panel + '-image', 1, {
             x: -20,
             autoAlpha: 1,

@@ -1,7 +1,7 @@
 <template>
     
 
-  <button class="testbutton">Find out More</button>
+  <button class="testbutton" v-scroll-to="'.services-title'">Find out More</button>
 
 
 </template>

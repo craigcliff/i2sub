@@ -8,7 +8,7 @@
    
     <div class="navigation-items">
       <ul class="nav-list">
-        <li class="nav-item"><nuxt-link to="/posts">About us</nuxt-link></li>
+        <li class="nav-item" ><nuxt-link to="/posts">About us</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/about">What we do</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/admin">How we do it</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/admin">Where we've done it</nuxt-link></li>
@@ -35,8 +35,11 @@ export default {
 
 
 <style scoped>
+
+
+
 .header-container {
-  height: 80px;
+  height: 10vh;
 }
 
 .the-header {
