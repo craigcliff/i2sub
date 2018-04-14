@@ -17,7 +17,7 @@
         <h5 class="slider1-desc">Specialists in geotechnical solutions</h5>
         <div class="slider1-btn">
           <buttonMain/> </div>
-        <h1 class="slider2-heading"> Worldwide <span class="wordColorChange">Strength</span> with local focus </h1>
+        <h1 class="slider2-heading"> Worldwide <span class="wordColorChange">strength</span> with local focus </h1>
         <h3 class="slider2-desc">Creating infrastructure that improves the world’s communities</h3>
         <div class="slider2-btn">
           <buttonMain/> </div>
