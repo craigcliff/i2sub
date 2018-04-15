@@ -9,7 +9,14 @@
     <div class="navigation-items">
       <ul class="nav-list">
         <li class="nav-item" ><nuxt-link to="/posts">About us</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/about">What we do</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/about">What we do</nuxt-link>
+         <!-- <ul class="nav-sub-list">
+            <li class="nav-sub-item"><a href="#">Tutorial #1@@</a></li>
+            <li class="nav-sub-item"><a href="#">Tutorial #2</a></li>
+            <li class="nav-sub-item"><a href="#">Tutorial #3</a></li>
+          </ul> -->
+        
+        </li>
         <li class="nav-item"><nuxt-link to="/admin">How we do it</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/admin">Where we've done it</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/admin">Contact us</nuxt-link></li>
@@ -66,7 +73,31 @@ export default {
   text-decoration: none;
   color: white;
 }
+.nav-sub-list li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  text-align: left;
+}
 
+.nav-sub-list a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding-left: 15px;
+  border-bottom: 1px solid #888;
+  transition: .3s background-color;
+}
+
+.nav-sub-list a:hover {
+  background-color: #005f5f;
+}
+
+.nav-sub-list a.active {
+  background-color: #aaa;
+  color: #444;
+  cursor: default;
+}
 .spacer {
   flex: 1 0 20%;
 }
@@ -80,6 +111,12 @@ export default {
 
 
 @media (min-width: 768px) {
+
+
+
+
+
+
   .navigation-items {
     display: block;
   }
