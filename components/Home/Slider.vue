@@ -122,6 +122,8 @@ color:#ff7f2a;
     flex: 1 0 20%;
     height: 100%;
     display: flex;
+    z-index: 1;
+    
   }
   
   .slider1-heading {
@@ -130,6 +132,7 @@ color:#ff7f2a;
     top: 290px;
     max-width: 300px;
     opacity: 0;
+     z-index: 1;
   }
   
   .slider1-desc {
@@ -138,12 +141,14 @@ color:#ff7f2a;
     top: 350px;
     font-weight: 200;
     opacity: 0;
+     z-index: 1;
   }
   
   .slider1-btn {
     position: absolute;
     top: 400px;
     opacity: 0;
+     z-index: 1;
   }
   
   .slider2-heading {
@@ -152,6 +157,7 @@ color:#ff7f2a;
     top: 250px;
     opacity: 0;
     max-width: 500px;
+     z-index: 1;
   }
   
   .slider2-desc {
@@ -161,12 +167,14 @@ color:#ff7f2a;
     opacity: 0;
     max-width: 500px;
     font-weight: 200;
+     z-index: 1;
   }
   
   .slider2-btn {
     position: absolute;
     top: 440px;
     opacity: 0;
+     z-index: 1;
   }
   
   .slider3-heading {
@@ -175,6 +183,7 @@ color:#ff7f2a;
     top: 260px;
     opacity: 0;
     max-width: 500px;
+     z-index: 1;
   }
   
   .slider3-desc {
@@ -184,12 +193,14 @@ color:#ff7f2a;
     opacity: 0;
     max-width: 500px;
     font-weight: 200;
+     z-index: 1;
   }
   
   .slider3-btn {
     position: absolute;
     top: 420px;
     opacity: 0;
+     z-index: 1;
   }
   
   .slider-image-container {

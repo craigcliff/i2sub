@@ -68,18 +68,21 @@ export default {
 
 
 .header-container {
-  height: 8vh;
+  height: 100vh;
+  z-index: 100;
+  position: relative;
 }
 
 .the-header {
   width: 100%;
-  position: relative;
+  
   height: 80px;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background-color: white;
-  z-index: 100;
+  
   box-sizing: border-box;
   padding: 0 20px;
   flex: 1;
@@ -88,7 +91,9 @@ export default {
 .logo {
   margin: 0 10px;
   font-size: 1.3rem;
-  flex: 1 0 20%;
+  flex: 1 0 5%;
+  align-self: flex-start;
+  
 }
 
 .logo a {
@@ -98,36 +103,29 @@ export default {
 
 
 .spacer {
-  flex: 1 0 20%;
+  flex: 1 0 5%;
 }
-
-.navigation-items {
-  display: none;
-
-    
-
-}
-
-
-@media (min-width: 768px) {
 
  .primary_nav_wrap
 {
-	margin-top:15px
+	margin-top:15px;
+  display: flex;
+  align-self: center;
+  position: relative;
+ 
 }
 
 .primary_nav_wrap ul
 {
 	list-style:none;
-	position:relative;
-	float:left;
-	margin:0;
-	padding:0
+  display: flex;
+  flex-direction: column;
+ 
 }
 
 .primary_nav_wrap ul a
 {
-	display:block;
+	display:flex;
 	color:#333;
 	text-decoration:none;
 	font-weight:700;
@@ -143,6 +141,11 @@ export default {
 	float:left;
 	margin:0;
 	padding:0
+
+
+
+  
+  
 }
 
 .primary_nav_wrap ul li.current-menu-item
@@ -188,7 +191,39 @@ export default {
 	display:block
 }
 
+
+
+
+
+@media (min-width: 768px) {
+
+  .header-container {
+  height: 8vh;
 }
 
+  .the-header {
+     display: flex;
+  flex-direction: row;
+  
+}
+
+.logo{
+
+align-self: center;
+
+}
+
+.primary_nav_wrap ul{
+
+
+flex-direction: row;
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0
+
+}
+
+}
 
 </style>
