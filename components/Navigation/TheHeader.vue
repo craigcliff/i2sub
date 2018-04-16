@@ -6,22 +6,44 @@
      <logo2/>
     </div>
    
-    <div class="navigation-items">
-      <ul class="nav-list">
-        <li class="nav-item" ><nuxt-link to="/posts">About us</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/about">What we do</nuxt-link>
-         <!-- <ul class="nav-sub-list">
-            <li class="nav-sub-item"><a href="#">Tutorial #1@@</a></li>
-            <li class="nav-sub-item"><a href="#">Tutorial #2</a></li>
-            <li class="nav-sub-item"><a href="#">Tutorial #3</a></li>
-          </ul> -->
-        
-        </li>
-        <li class="nav-item"><nuxt-link to="/admin">How we do it</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/admin">Where we've done it</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/admin">Contact us</nuxt-link></li>
-      </ul>
-    </div>
+    <nav class="primary_nav_wrap">
+<ul>
+  <li class="menu-item"><a href="#">About us</a></li>
+  <li><a href="#">What we do</a>
+    <ul>
+      <li><a href="#">Sub Menu 1</a></li>
+      <li><a href="#">Sub Menu 2</a></li>
+      <li><a href="#">Sub Menu 3</a></li>
+      <li><a href="#">Sub Menu 4</a>
+        <ul>
+          <li><a href="#">Deep Menu 1</a>
+            <ul>
+              <li><a href="#">Sub Deep 1</a></li>
+              <li><a href="#">Sub Deep 2</a></li>
+              <li><a href="#">Sub Deep 3</a></li>
+                <li><a href="#">Sub Deep 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Deep Menu 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Sub Menu 5</a></li>
+    </ul>
+  </li>
+  <li><a href="#">How we do it</a>
+    <ul>
+      <li><a href="#">Sub Menu 1</a></li>
+      <li><a href="#">Sub Menu 2</a></li>
+      <li><a href="#">Sub Menu 3</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Where we've done it</a>
+    
+  </li>
+  
+  <li><a href="#">Contact Us</a></li>
+</ul>
+</nav>
     <div class="spacer"></div>
   </header>
 </div>
@@ -73,31 +95,8 @@ export default {
   text-decoration: none;
   color: white;
 }
-.nav-sub-list li {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  text-align: left;
-}
 
-.nav-sub-list a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-  padding-left: 15px;
-  border-bottom: 1px solid #888;
-  transition: .3s background-color;
-}
 
-.nav-sub-list a:hover {
-  background-color: #005f5f;
-}
-
-.nav-sub-list a.active {
-  background-color: #aaa;
-  color: #444;
-  cursor: default;
-}
 .spacer {
   flex: 1 0 20%;
 }
@@ -112,62 +111,83 @@ export default {
 
 @media (min-width: 768px) {
 
-
-
-
-
-
-  .navigation-items {
-    display: block;
-  }
+ .primary_nav_wrap
+{
+	margin-top:15px
 }
 
-.nav-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-
-  
+.primary_nav_wrap ul
+{
+	list-style:none;
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0
 }
 
-.nav-item {
-  margin: 0 20px;
+.primary_nav_wrap ul a
+{
+	display:block;
+	color:#333;
+	text-decoration:none;
+	font-weight:700;
+	font-size:14px;
+	line-height:32px;
+	padding:0 15px;
+	font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
-.nav-item a {
-  position: relative;
-  text-decoration: none;
-  color: black;
-  font-size:14px;
-  font-weight:500;
+.primary_nav_wrap ul li
+{
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0
 }
 
-.nav-item a:hover,
-.nav-item a:active,
-.nav-item a.nuxt-link-active {
-  color: #ff7f2a; ;
+.primary_nav_wrap ul li.current-menu-item
+{
+	background:#ddd
 }
 
-.nav-item > a:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -3px;
-  left: 0;
-  background-color: black;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+.primary_nav_wrap ul li:hover
+{
+	background:#f6f6f6
 }
 
-.nav-item > a:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+.primary_nav_wrap ul ul
+{
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background:#fff;
+	padding:0
+}
+
+.primary_nav_wrap ul ul li
+{
+	float:none;
+	width:200px
+}
+
+.primary_nav_wrap ul ul a
+{
+	line-height:120%;
+	padding:10px 15px
+}
+
+.primary_nav_wrap ul ul ul
+{
+	top:0;
+	left:100%
+}
+
+.primary_nav_wrap ul li:hover > ul
+{
+	display:block
+}
+
 }
 
 
