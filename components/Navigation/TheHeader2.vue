@@ -1,10 +1,20 @@
 <template>
   <header>
     <div id="logo" class="menuUp">
-        <h1>i2sub</h1>
-        <div id="navToggle"><a href="#">Menu</a></div>
+         <logo2/>
+        <div class="navToggle" @click="toggleButton"
+        v-bind:class="{ 'change': active }"
+         >
+
+ <div class="  bar1"></div>
+  <div class="  bar2"></div>
+  <div class="  bar3"></div>
+
+
+
+        </div>
     </div>
-    <nav>
+    <nav v-bind:class="{ 'nav-active': active }">
         <ul>
             <li><a href="#">About us</a></li>
             <li><a href="#">What we do<span class="toggle">Expand</span><span class="caret"></span></a>
@@ -39,25 +49,118 @@
 </template>
 
 
+<script>
+
+
+  import {
+  
+    TweenMax
+  
+  } from "gsap";
+
+  import Text from "gsap/TextPlugin"
+  import TimelineMax from "gsap/TimelineMax";
+  import buttonMain from "@/components/Layout/button.vue"
+  import Logo2 from '~/components/Logo2.vue'
+  
+  
+  export default {
+    components: {
+      buttonMain,
+      Logo2
+    },
+  
+  
+  
+    data() {
+  
+      return {
+  
+      active: false
+  
+  
+      }
+    },
+  
+    mounted() {
+  
+     
+  
+  
+    },
+  
+    methods: {
+  
+      toggleButton: function() {
+
+          this.active = !this.active;
+          console.log(this.active);
+  
+        
+  
+  
+  
+      },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      first: function() {
+  
+  
+  
+        this.master.play(1);
+  
+  
+      },
+      middle: function() {
+  
+        //this.master.seek(this.createPanel(".slider2"));
+  
+  
+      },
+      last: function() {
+  
+        //this.master.add(this.createPanel(".slider3"))
+        //.play();
+  
+      },
+  
+  
+  
+  
+  
+  
+  
+    }
+  
+  
+  }
+</script>
+
 <style >
 
-* {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    box-sizing: border-box;
-}
+
 
 
 
 header {
-    background-color: rgb(140, 193, 193);
-    border-bottom: 1px solid rgba(0,0,0,.15);
+    background-color: rgb(255, 255, 255);
+    
     display: flex;
     flex-direction: column;
     text-align: center;
     position: absolute;
     width: 100vw;
+    z-index:3;  
+    height: 10vh;
    
 }
 
@@ -80,7 +183,7 @@ header {
             text-transform: lowercase;
         }
         
-        header > div#logo > div#navToggle {
+        header > div#logo > div.navToggle {
             background-color: rgba(0,0,0,.15);
             position: absolute;
             right: 0;
@@ -88,11 +191,11 @@ header {
             transition: 300ms all ease;
         }
             
-            header > div#logo > div#navToggle:hover {
-                background-color: rgba(0,0,0,.1);
+            header > div#logo > div.navToggle:hover {
+                background-color: #ff7f2a;
             }
             
-            header > div#logo > div#navToggle > a {
+            header > div#logo > div.navToggle > a {
                 color: rgba(255,255,255,.85);
                 display: block;
                 font-size: 0.85em;
@@ -102,19 +205,30 @@ header {
                 transition: 300ms all ease;
             }
             
-                header > div#logo > div#navToggle:hover > a {
+                header > div#logo > div.navToggle:hover > a {
                     color: rgba(255,255,255,1);
                 }
 
     header > nav {
         background-color: white;
-        display: block;
+        display: none;
         
         flex: 1;
         transform: 300ms all ease;
         z-index:1;
+        margin-top: 20px;
+        transition: all 3.5s;
+    }
+
+    .nav-active {
+ display: block;
+     transform:scale(1.3);   
+
+
     }
     
+
+
         header nav > ul {
             list-style-type: none;    
         }
@@ -152,7 +266,7 @@ header {
 					}
                 
                     header > nav > ul > li:hover > a {
-                        color: rgb(140, 193, 193);  
+                        color: #ff7f2a;  
                     }
                 
             header > nav > ul > li > nav {
@@ -177,9 +291,43 @@ header {
                         color: rgba(255,255,255,1);
                     }
 
+        .navToggle{
+
+margin-right: 15px;
+margin-top: 10px;
+
+
+        }
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
 /* Medium screens */
 @media all and (min-width: 600px) {
-    header > div#logo > div#navToggle {
+    header > div#logo > div.navToggle {
         display: none;    
     }
     
@@ -188,7 +336,7 @@ header {
         flex-direction: row;
         line-height: 90px;
         padding: 0 3rem;
-		position: fixed;
+		position: relative;
         text-align: left;
 		width: 100%;
     }
@@ -205,6 +353,8 @@ header {
     header > nav {
         background-color: transparent;
         display: block;
+        margin-top: 0;
+        padding-bottom: -60px;
     }
     
         header > nav > ul {
@@ -227,7 +377,7 @@ header {
 					
 					header nav > ul > li > a span.caret {
                         border-bottom: 4px solid transparent;
-                        border-top: 4px solid rgba(0,0,0,.65);
+                        border-top: 4px solid #ff7f2a;
                         border-right: 4px solid transparent;
                         border-left: 4px solid transparent;
 						border-radius: 1px;
@@ -241,7 +391,7 @@ header {
 					}
 					
 						header nav > ul > li:hover > a span.caret {
-							border-top-color: rgb(140, 193, 193);
+							border-top-color: black;
 							transform: rotate(270deg); 
 						}
     

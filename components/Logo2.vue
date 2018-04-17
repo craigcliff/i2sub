@@ -4,9 +4,9 @@
 
 <svg
    
-   width="290"
-   height="120"
-   viewBox="0 -3 76.240592 20.918168"
+   width="250"
+   height="80"
+   viewBox="0 0 76.240592 20.918168"
    version="1.1"
    id="svg2154">
   <defs

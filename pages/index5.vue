@@ -32,6 +32,8 @@
       Services,
       Bottom
     },
+
+    layout: 'other',
   
   
   

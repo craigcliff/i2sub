@@ -69,7 +69,7 @@ export default {
 
 .header-container {
   height: 100vh;
-  width: 100vw;
+ 
   z-index: 100;
   
 }
