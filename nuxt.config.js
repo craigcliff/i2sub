@@ -26,7 +26,12 @@ module.exports = {
     /*
      ** Global CSS
      */
-    css: ['@/assets/css/main.css'],
+    css: ['@/assets/css/main.css',
+    '@/assets/css/main.scss'
+
+
+
+],
 
     /*
      ** Plugins to load before mounting the App
@@ -36,7 +41,22 @@ module.exports = {
     /*
      ** Nuxt.js modules
      */
-    modules: [],
+    modules: [
+        'nuxt-sass-resources-loader'
+           
+
+
+        
+    ],
+
+    sassResources: [
+        '@assets/sass/_variables.scss',
+        
+        
+        '@assets/sass/_mixins.scss',
+        '@assets/sass/_base.scss'
+      ],
+
 
     /*
      ** Build configuration

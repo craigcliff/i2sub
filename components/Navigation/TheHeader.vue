@@ -63,7 +63,9 @@ export default {
 </script>
 
 
-<style scoped>
+
+
+<style lang="scss" scoped >
 
 
 
@@ -82,7 +84,7 @@ export default {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
+  background-color: $color-white;
   
   box-sizing: border-box;
   padding: 0 20px;
@@ -127,7 +129,7 @@ export default {
 .primary_nav_wrap ul a
 {
 	display:flex;
-	color:#333;
+	color:$color-black;
 	text-decoration:none;
 	font-weight:700;
 	font-size:14px;
