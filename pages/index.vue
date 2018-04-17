@@ -40,6 +40,9 @@ export default {
   
   border-left: 30px white solid;
   border-right: 30px white solid;
+  
+  
+  
 }
 
 .logo-main

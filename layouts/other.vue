@@ -1,6 +1,6 @@
 <template>
   <div>
-     
+     <TheHeader2/>
     <TheSidenav />
     <nuxt/>
   </div>
@@ -9,12 +9,14 @@
 <script>
 
 import TheSidenav from '@/components/Navigation/TheSidenav'
+import TheHeader2 from '@/components/Navigation/TheHeader2'
 
 export default{
 
   components: {
 
-    TheSidenav
+    TheSidenav,
+    TheHeader2
 
 
   }
