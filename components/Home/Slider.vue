@@ -13,18 +13,24 @@
       </div>
   
       <div class="slider-heading-main">
+        <div class="slider-heading-main1">
         <h1 class="slider1-heading"> Who <span class="wordColorChange">we</span> are </h1>
         <h5 class="slider1-desc">Specialists in geotechnical solutions</h5>
         <div class="slider1-btn">
           <buttonMain/> </div>
+        </div>
+          <div class="slider-heading-main2">
         <h1 class="slider2-heading"> Worldwide <span class="wordColorChange">strength</span> with local focus </h1>
         <h3 class="slider2-desc">Creating infrastructure that improves the world’s communities</h3>
         <div class="slider2-btn">
           <buttonMain/> </div>
+          </div>
+            <div class="slider-heading-main3">
         <h1 class="slider3-heading"> What we <span class="wordColorChange">do</span> </h1>
         <h3 class="slider3-desc">We solve geotechnical challenges spanning entire construction spectrums</h3>
         <div class="slider3-btn">
           <buttonMain/> </div>
+          </div>
       </div>
   
     </div>
@@ -124,85 +130,109 @@ color:#ff7f2a;
     flex: 1 0 20%;
     height: 100%;
     display: flex;
+    flex-direction: column;
+  
     z-index: 2;
+ 
+    justify-content: center;
+    position: relative;
     
+    
+    
+  }
+
+  .slider-heading-main1{
+
+    position: absolute;
+
+  }
+  .slider-heading-main2{
+
+    position: absolute;
+
+  }
+  .slider-heading-main3{
+
+    position: absolute;
+
   }
   
   .slider1-heading {
+ 
     font-size: 42px;
-    position: absolute;
-    top: 290px;
-    max-width: 300px;
     opacity: 0;
+    padding-top: 15px;
+    padding-bottom: 0;
+    
        
   }
   
   .slider1-desc {
-    font-size: 25px;
-    position: absolute;
-    top: 350px;
-    font-weight: 200;
+   
+   font-size: 25px;
     opacity: 0;
-      
+    padding-top: 15px;
+      font-weight: 200;
+      padding-bottom: 0;
+      line-height: 40px;
   }
   
   .slider1-btn {
-    position: absolute;
-    top: 400px;
+   
     opacity: 0;
-    
+    padding-top: 20px;
+    padding-bottom: 0;
   }
   
   .slider2-heading {
-    font-size: 42px;
-    position: absolute;
-    top: 250px;
+     font-size: 42px;
     opacity: 0;
-    max-width: 500px;
-       
+   padding-top: 15px;
+     line-height: 40px;
+       padding-bottom: 0;
   }
   
   .slider2-desc {
-    font-size: 25px;
-    position: absolute;
-    top: 360px;
+font-size: 25px;
     opacity: 0;
-    max-width: 500px;
-    font-weight: 200;
+   font-weight: 200;
+    padding-top: 15px;
+    padding-bottom: 0;
+    line-height: 30px;
      
   }
   
   .slider2-btn {
-    position: absolute;
-    top: 440px;
+  
     opacity: 0;
-    
+    padding-top: 20px;
+    padding-bottom: 0;
   }
   
   .slider3-heading {
-    font-size: 42px;
-    position: absolute;
-    top: 260px;
+     font-size: 42px;
     opacity: 0;
-    max-width: 500px;
+   padding-top: 15px;
+    padding-bottom: 0;
+    line-height: 40px;
       
   }
   
   .slider3-desc {
-    font-size: 25px;
-    position: absolute;
-    top: 330px;
+font-size: 25px;
     opacity: 0;
-    max-width: 500px;
-    font-weight: 200;
+     font-weight: 200;
+   padding-top: 15px;
+    padding-bottom: 0;
+    line-height: 30px;
        
   }
   
   .slider3-btn {
-    position: absolute;
-    top: 420px;
+
     opacity: 0;
-  
+  padding-top: 20px;
+    padding-bottom: 0;
   }
   
   .slider-image-container {
@@ -341,10 +371,10 @@ display: none;
     mounted() {
   
       this.master
-        .add(this.createPanel(".slider1"), "slide1")
-        .add(this.createPanel(".slider2"), "slide2")
+        .add(this.createPanel(".slider1"), "slide1",0.1)
+        .add(this.createPanel(".slider2"), "slide2",0.1)
   
-        .add(this.createPanel(".slider3"), "slide3");
+        .add(this.createPanel(".slider3"), "slide3",0.1);
   
     
   
@@ -361,7 +391,7 @@ display: none;
           })
 
           
-          .to(panel + '-image', 1, {
+          .to(panel + '-image', 0.6, {
             x: -20,
             autoAlpha: 1,
             display: "block"

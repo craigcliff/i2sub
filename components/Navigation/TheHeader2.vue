@@ -20,11 +20,12 @@
             <li><a href="#">What we do<span class="toggle">Expand</span><span class="caret"></span></a>
             <nav>
                     <ul>
-                        <li><a href="#">Service 1</a></li>
-                        <li><a href="#">Service 1</a></li>
-                        <li><a href="#">Service 1</a></li>
-                        <li><a href="#">Service 1</a></li>
-                        <li><a href="#">Service 1</a></li>
+                        <li><a href="#">Lab Testing</a></li>
+                        <li><a href="#">Geological Consultancy</a></li>
+                        <li><a href="#">Oil and Gas Services</a></li>
+                        <li><a href="#">Site Investigation</a></li>
+                        <li><a href="#">Drilling</a></li>
+                        <li><a href="#">Contaminated Land</a></li> 
                     </ul>
                 </nav>
             
@@ -198,7 +199,7 @@ header {
             header > div#logo > div.navToggle > a {
                 color: rgba(255,255,255,.85);
                 display: block;
-                font-size: 0.85em;
+                font-size: 0.25em;
                 font-weight: 600;
                 padding: 0 2.5rem;
                 text-decoration: none;
@@ -245,11 +246,13 @@ header {
                 header nav > ul > li > a {
                     display: block;
                     color: rgba(0,0,0,.65);
-                    font-weight: 700;
+                    font-weight: 500;
                     padding: 1.5rem 0;
                     text-decoration: none;
                     transition: 250ms all ease;
                 }
+
+                 
 				
 					header nav > ul > li > a span.toggle {
 						background-color: rgba(0,0,0,.05);
@@ -277,8 +280,10 @@ header {
                 overflow: hidden;
                 position: absolute;
                 right: 5%;
-                width: 90%;
+                width: 100%;
                 z-index: 100;
+                font-size: 14px;
+                
             }
             
                 header > nav > ul > li > nav > ul > li > a {
@@ -354,7 +359,7 @@ margin-top: 10px;
         background-color: transparent;
         display: block;
         margin-top: 0;
-        padding-bottom: -60px;
+       
     }
     
         header > nav > ul {
