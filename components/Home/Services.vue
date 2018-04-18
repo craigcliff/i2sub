@@ -4,9 +4,9 @@
   
     <div class="card-services">
       <div class="card card1">
-        <div class="card-inner card1-inner">
-          <h2 class="card-title card1-title">Testing 1234</h2>
-          <p class="card-description card1-description">asfsadfdsaffdsa </p>
+        <div class="card-inner card-inner1">
+          <h2 class="card-title card-title1">Testing 1234</h2>
+          <p class="card-description card-description1">asfsadfdsaffdsa </p>
         </div>
   
       </div>
@@ -15,9 +15,9 @@
   
   
       <div class="card card2">
-        <div class="card-inner card2-inner">
-          <h2 class="card-title card2-title">Testing 1234</h2>
-          <p class="card-description card2-description">asfsadfdsaffdsa </p>
+        <div class="card-inner card-inner2">
+          <h2 class="card-title card-title2">Testing 1234</h2>
+          <p class="card-description card-description2">asfsadfdsaffdsa </p>
         </div>
   
   
@@ -25,9 +25,9 @@
   
   
       <div class="card card3">
-        <div class="card-inner card3-inner">
-          <h2 class="card-title card3-title">Testing 1234</h2>
-          <p class="card-description card3-description">asfsadfdsaffdsa </p>
+        <div class="card-inner card-inner3">
+          <h2 class="card-title card-title3">Testing 1234</h2>
+          <p class="card-description card-description3">asfsadfdsaffdsa </p>
         </div>
   
       </div>
@@ -63,11 +63,11 @@
 
 
 
-<style scoped>
+<style lang='scss' scoped>
   .services-main {
     /* height: 100vh; */
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
     height: 100vh;
   }
   
@@ -75,15 +75,6 @@
     height: 15vh;
     font-size: 42px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .card-services {
-    height: 85vh;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
@@ -98,64 +89,71 @@
     justify-content: center;
     align-items: center;
     transition: all 1s ease-in-out;
-  }
-  
-  .card:hover {}
-  
-  .card1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("~/assets/lab1.jpg");
-  }
-  
-  .card1:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("~/assets/lab2.jpg");
-  }
-  
-  .card2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("~/assets/lab1.jpg");
-  }
-  
-  .card2:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("~/assets/lab2.jpg");
-  }
-  
-  .card3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("~/assets/lab1.jpg");
-  }
-  
-  .card3:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("~/assets/lab2.jpg");
-  }
-  
-  .card-inner {
-    width: 26vw;
+    &-services {
+      height: 85vh;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    &1 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("~/assets/lab1.jpg");
+      &:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("~/assets/lab2.jpg");
+      }
+    }
+    &2 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("~/assets/lab1.jpg");
+      &:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("~/assets/lab2.jpg");
+      }
+    }
+    &3 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("~/assets/lab1.jpg");
+      &:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("~/assets/lab2.jpg");
+      }
+    }
+    &-inner{
+
+width: 26vw;
     height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  .card1-inner {
+
+&1 {
     transition: all 1s;
   }
   
-  .card2-inner {
+  &2 {
     transition: all 1s;
   }
   
-  .card3-inner {
+  &3 {
     transition: all 1s;
   }
+
+
+
+    }
+
+  }
   
-  .card1:hover .card1-inner {
+  
+  
+  
+  .card1:hover .card-inner1 {
     border: groove black 5.5px;
   }
   
-  .card2:hover .card2-inner {
+  .card2:hover .card-inner2 {
     border: groove black 5.5px;
   }
   
-  .card3:hover .card3-inner {
+  .card3:hover .card-inner3 {
     border: groove black 5.5px;
   }
   
@@ -168,15 +166,15 @@
     align-items: center;
   }
   
-  .card1-title {
+  .card-title1 {
     transition: all 1s;
   }
   
-  .card2-title {
+  .card-title2 {
     transition: all 1s;
   }
   
-  .card3-title {
+  .card-title3 {
     transition: all 1s;
   }
   
@@ -190,42 +188,42 @@
     color: white;
   }
   
-  .card1-description {
+  .card-description1 {
     transition: all 1s;
   }
   
-  .card2-description {
+  .card-description2 {
     transition: all 1s;
   }
   
-  .card3-description {
+  .card-description3 {
     transition: all 1s;
   }
   
-  .card1:hover .card1-description {
+  .card1:hover .card-description1 {
     opacity: 1;
     transform: translateY(-10px);
   }
   
-  .card2:hover .card2-description {
+  .card2:hover .card-description2 {
     opacity: 1;
     transform: translateY(-10px);
   }
   
-  .card3:hover .card3-description {
+  .card3:hover .card-description3 {
     opacity: 1;
     transform: translateY(-10px);
   }
   
-  .card1:hover .card1-title {
+  .card1:hover .card-title1 {
     transform: translateY(10px);
   }
   
-  .card2:hover .card2-title {
+  .card2:hover .card-title2 {
     transform: translateY(10px);
   }
   
-  .card3:hover .card3-title {
+  .card3:hover .card-title3 {
     transform: translateY(10px);
   }
 </style>
