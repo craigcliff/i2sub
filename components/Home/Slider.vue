@@ -145,6 +145,12 @@
   .slider-heading-main3 {
     position: absolute;
   }
+
+  .slider-heading-main1,
+  .slider-heading-main2,
+  .slider-heading-main3 {
+    position: absolute;
+  }
   
   .slider1-heading,
   .slider2-heading,
