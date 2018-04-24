@@ -219,7 +219,7 @@
     background-size: cover;
     background-position: center;
     margin-top: 120px;
-    margin-left: 90px;
+    
     height: 85%;
     width: auto;
     visibility: hidden;

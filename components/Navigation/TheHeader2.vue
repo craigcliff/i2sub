@@ -59,7 +59,7 @@
     import TimelineMax from "gsap/TimelineMax";
     import buttonMain from "@/components/Layout/button.vue"
     import Logo2 from '~/components/Logo2.vue'
-    
+        
     
     export default {
         components: {
