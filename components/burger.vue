@@ -22,9 +22,9 @@
 
 <style>
     .hamburger .line {
-        width: 50px;
-        height: 5px;
-        background-color: #ecf0f1;
+        width: 35px;
+        height: 4.5px;
+        background-color: black;
         display: block;
         margin: 8px auto;
         -webkit-transition: all 0.3s ease-in-out;

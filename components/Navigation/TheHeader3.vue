@@ -104,8 +104,8 @@ export default {
 active:function(val){
 
 this.tl.to('header', 0.1, {css: {height: '100%'}})
-this.tl.to('.nav-items', 0.1 ,{css: {opacity: 1}})
-//this.tl.staggerFrom(".nav-item", 2, {scale:0.5, opacity:1, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
+this.tl.to('.nav-items', 0.1 ,{css: {opacity: 1,ease:Elastic.easeOut}});
+//this.tl.staggerFromTo(".nav-item", 2, {scale:0.5, opacity:1, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
 if (val === true){
     this.tl.play();
 //this.to.staggerFrom(".nav-item", 2, {scale:0.5, opacity:1, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
@@ -130,7 +130,7 @@ console.log('hello');
 <style lang="scss" scoped>
 header {
   height: 7.5vh;
-  background-color: grey;
+  background-color:white;
   width: 100%;
   display: flex;
   align-items: center;
