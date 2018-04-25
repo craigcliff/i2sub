@@ -150,6 +150,7 @@
   .slider-heading-main2,
   .slider-heading-main3 {
     position: absolute;
+    margin-left:20px;
   }
   
   .slider1-heading,
@@ -181,6 +182,7 @@
     padding-top: 15px;
     font-weight: 200;
     padding-bottom: 0;
+     padding-right: 50px;
     line-height: 40px;
 
     @include respond(tab-port) {
