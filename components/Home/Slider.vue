@@ -52,6 +52,7 @@
 
 <style lang="scss">
   .container3 {
+        padding: 0px 50px;
     height: 80vh;
     display: flex;
     background-color: #dde6ef;
@@ -116,7 +117,7 @@
     flex: 1 0 50%;
     display: flex;
     flex-direction: row;
-    padding-left: 60px;
+    
     justify-content: center;
   }
   

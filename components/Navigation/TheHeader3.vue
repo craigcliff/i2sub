@@ -128,6 +128,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
+        padding: 0px 50px;
   height: 11.5vh;
   background-color: white;
   width: 100%;
@@ -158,6 +159,9 @@ header {
 }
 
 .nav-container {
+
+
+   
   @include respond(tab-port) {
     display: flex;
     height: 92.5vh;
