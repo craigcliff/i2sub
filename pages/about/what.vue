@@ -10,17 +10,25 @@
 
 </template>
 
+<script>
+export default {
+  layout: 'layout3'
+}
+</script>
+
 
 <style scoped>
 
 .container-what{
+  padding: 0px 50px;
 height: 100vh;
+
 background: cadetblue
 
 }
 
 .heading{
-    width: 100vw;
+   
     height:30vh;
     display: flex;
     align-items: center;

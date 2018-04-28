@@ -30,8 +30,8 @@ export default{
 
 body {
 
-margin: 0 auto;
-padding: 0px 50px;
+
+
 
 }
 

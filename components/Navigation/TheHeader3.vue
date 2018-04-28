@@ -4,7 +4,7 @@
         <nav class="nav-container">
     
             <ul class="nav-items">
-                <li class="nav-item"><nuxt-link to="/">I2SUB</nuxt-link>
+                <li class="nav-item "><nuxt-link to="/" exact>I2SUB</nuxt-link>
     
     
   
@@ -14,37 +14,42 @@
 
                     <ul class="sub-nav-items">
                        
-                        <li class="about1"> <nuxt-link to="/about/who">Who we are</nuxt-link></li>
-                        <li class="what2"> <nuxt-link to="/about/what">What we do</nuxt-link></li>
-                        <li class="how3"> <nuxt-link to="/about/worldwide">Worldwide Strength</nuxt-link></li>
+                        <li> <nuxt-link to="/about/who">Who we are</nuxt-link></li>
+                        <li> <nuxt-link to="/about/what">What we do</nuxt-link></li>
+                        <li> <nuxt-link to="/about/worldwide">Worldwide Strength</nuxt-link></li>
     
                     </ul>
     
                 </li>
-                <li class="nav-item"><a href="#">Our Services</a>
+               <li class="nav-item">    <nuxt-link to="/services">Our Services</nuxt-link>
     
                     <ul class="sub-nav-items">
-                        <li class="about3"><a href="#">Drilling</a></li>
-                        <li class="what5"><a class="active" href="#">Water Services</a></li>
-                        <li class="how2"><a href="#">Geotechnical Services</a></li>
-                        <li class="where5"><a href="#">Subsurface Characterization</a></li>
-                        <li class="contactd"><a href="#">Oil and Gas Services</a></li>
+
+
+                        <li> <nuxt-link to="/services/drilling">Drilling</nuxt-link></li>
+                        <li> <nuxt-link to="/services/water">Water Services</nuxt-link></li>
+                        <li> <nuxt-link to="/services/geotechnical">Geotechnical Services</nuxt-link></li>
+                        <li> <nuxt-link to="/services/subsurface">Subsurface Characterization</nuxt-link></li>
+                        <li> <nuxt-link to="/services/oilgas">Oil and Gas Services</nuxt-link></li>
+                        
+                      
                     </ul>
     
     
     
                 </li>
-                <li class="nav-item"><a href="#">Resources</a>
+                <li class="nav-item"><nuxt-link to="/resources">Resources</nuxt-link>
                     <ul class="sub-nav-items">
-                        <li class="about3"><a href="#">Projects</a></li>
-                        <li class="what5"><a class="active" href="#">Case studies</a></li>
-                        <li class="how2"><a href="#">Technical Drives</a></li>
-                        <li class="where5"><a href="#">HSE</a></li>
+                      
+                        <li> <nuxt-link to="/resources/projects">Projects</nuxt-link></li>
+                        <li> <nuxt-link to="/resources/casestudies">Case Studies</nuxt-link></li>
+                        <li> <nuxt-link to="/resources/technical">Technical Drives</nuxt-link></li>
+                        <li> <nuxt-link to="/resources/hse">HSE</nuxt-link></li>
     
                     </ul>
                 </li>
     
-                <li class="nav-item"><a href="#">Contact us</a></li>
+            <li class="nav-item"><nuxt-link to="/contact">Contact Us</nuxt-link></li>
             </ul>
     
     
@@ -131,12 +136,12 @@ header {
         padding: 0px 50px;
   height: 11.5vh;
   background-color: white;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   //   transition: all 0.5s ease-in;
-  position: absolute;
+  position: fixed;
   z-index: 400;
   // @include respond(tab-port) {
   //     flex-direction: column;
@@ -160,7 +165,6 @@ header {
 
 .nav-container {
 
-
    
   @include respond(tab-port) {
     display: flex;
@@ -169,6 +173,7 @@ header {
     justify-content: center;
   }
 }
+
 
 .sub-nav-items {
   //position Nav Items
@@ -204,8 +209,42 @@ header {
       text-decoration: none;
       padding: 0 2em;
       font-size: 16px;
-      font-weight: bold;
+      font-weight: 600;
+
+     
     }
+    & ul{
+
+
+
+&:last-child{
+    padding-bottom:20px;
+
+}
+    }
+
+     & ul li{
+         padding-top: 10px;
+        
+         margin-left:30px;
+        margin-right:30px;
+         border-bottom: $color-secondary-light solid 1px;
+        
+         
+
+
+
+     }
+
+      & ul li a {
+           
+            font-size: 14px;
+      font-weight: 500;
+      
+
+        }
+
+       
 
     &:hover > a {
       transition: 0.3s all ease-in-out;
@@ -214,9 +253,11 @@ header {
   }
 
   & > li:not(:last-child) {
-    border-right: 1px solid $color-grey-dark-2;
+    border-right: 1px solid $color-secondary-light;
   }
 }
+
+
 
 .displayNavItems {
   @include respond(tab-port) {
@@ -227,13 +268,6 @@ header {
 
 /*Prevent text wrapping*/
 
-li ul li a {
-  width: auto;
-  min-width: 80px;
-  padding: 0 5px;
-  color: $color-black;
-  text-align: center;
-}
 
 li:hover ul a {
   //dropdown list style
@@ -265,5 +299,15 @@ li:hover ul a {
     top: 1%;
   }
 }
+
+a.nuxt-link-active {
+  color: $color-primary !important;
+  
+  
+}
+li.nuxt-link-active a {
+   color: $color-primary !important;
+}
+
 </style>
 

@@ -41,7 +41,9 @@ export default {
 }
 .testbutton:hover {
   color: rgb(0, 2, 5) !important;
-  background: #ff7f2a;
+  background: $color-primary;
+  border: 2px solid $color-primary;
+    box-shadow: none;
   cursor: pointer; 
 }
 

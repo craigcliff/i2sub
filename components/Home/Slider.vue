@@ -69,7 +69,7 @@
   }
   
   .wordColorChange {
-    color: #ff7f2a;
+    color: $color-primary;
   }
   
   .slider-dot-container {

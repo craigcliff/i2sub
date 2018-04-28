@@ -1,7 +1,7 @@
 <template>
-  <div class = "container-who">
+  <div class = "container-contact">
 
-<h1 class ="heading">Who we Are</h1>
+<h1 class ="heading">Contact Us</h1>
 
 
 
@@ -10,31 +10,33 @@
 
 </template>
 
-
 <script>
 export default {
   layout: 'layout3'
 }
 </script>
 
+
 <style scoped>
 
-.container-who{
+.container-contact{
   padding: 0px 50px;
 height: 100vh;
 
-background: rgb(115, 150, 151)
+background: cadetblue
 
 }
 
 .heading{
-
-   height:30vh;
+   
+    height:30vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
+
+
 
 
 </style>
