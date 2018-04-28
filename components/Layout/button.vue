@@ -1,10 +1,18 @@
 <template>
     
 
-  <button class="testbutton" v-scroll-to="'.services-title'">Find out More</button>
+  <button class="testbutton" v-scroll-to="myProp">Find out More</button>
 
 
 </template>
+
+<script>
+export default {
+  props: [
+    'myProp'
+  ]
+}
+</script>
 
 
 <style lang= "scss">

@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container-home">
     <div class = "logo-main">
       <logo/>
      
@@ -18,15 +18,15 @@ import Logo from '~/components/Logo.vue'
 
 export default {
 
-  layout: 'other',
+  layout: 'layout3',
   components: {
     Logo
   }
 }
 </script>
 
-<style >
-.container
+<style scoped >
+.container-home
 {
   min-height: 100vh;
   display: flex;

@@ -1,20 +1,19 @@
 <template>
   <div>
-    <TheHeader />
-    <TheSidenav />
+    <TheHeader3 />
+
     <nuxt/>
   </div>
 </template>
 
 <script>
-import TheHeader from '@/components/Navigation/TheHeader'
-import TheSidenav from '@/components/Navigation/TheSidenav'
+import TheHeader3 from '@/components/Navigation/TheHeader3'
+
 
 export default{
 
   components: {
-    TheHeader,
-    TheSidenav
+    TheHeader3
 
 
   }

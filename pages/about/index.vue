@@ -1,8 +1,11 @@
 <template>
   <section class="main">
+
   <Slider />
   <Bottom />
-  
+  <what />
+  <who />
+  <worldwide />
   <Services />
   
   </section>
@@ -24,14 +27,19 @@
   import Slider from "@/components/Home/Slider.vue"
   import Services from "@/components/Home/Services.vue"
   import Bottom from "@/components/Home/Bottom.vue"
+import what from "@/pages/about/what.vue"
+import who from "@/pages/about/who.vue"
+  import worldwide from "@/pages/about/worldwide.vue"
 
 
-  
   export default {
     components: {
       Slider,
       Services,
-      Bottom
+      Bottom,
+      what,
+      who,
+      worldwide
     },
 
     layout: 'layout3',

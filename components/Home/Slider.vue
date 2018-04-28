@@ -16,28 +16,27 @@
         <div class="slider-heading-main1">
           <h1 class="slider1-heading"> Who <span class="wordColorChange">we</span> are </h1>
           <h5 class="slider1-desc">Specialists in geotechnical solutions</h5>
-          <div class="slider1-btn">
-            <buttonMain/> </div>
+          <div class="slider1-btn" >
+            <buttonMain :myProp= "'.container-who'" /> </div>
         </div>
         <div class="slider-heading-main2">
           <h1 class="slider2-heading"> Worldwide <span class="wordColorChange">strength</span> with local focus </h1>
           <h3 class="slider2-desc">Creating infrastructure that improves the world’s communities</h3>
           <div class="slider2-btn">
-            <buttonMain/> </div>
+            <buttonMain :myProp= "'.container-worldwide'"/> </div>
         </div>
         <div class="slider-heading-main3">
           <h1 class="slider3-heading"> What we <span class="wordColorChange">do</span> </h1>
           <h3 class="slider3-desc">We solve geotechnical challenges spanning entire construction spectrums</h3>
           <div class="slider3-btn">
-            <buttonMain/> </div>
+            <buttonMain :myProp= "'.container-what'" /> </div>
         </div>
       </div>
   
     </div>
   
   
-  
-  
+    
   
     <div class="slider-image-container">
       <div class=" slider-image slider1-image"> </div>
@@ -53,7 +52,7 @@
 
 <style lang="scss">
   .container3 {
-    height: 60vh;
+    height: 80vh;
     display: flex;
     background-color: #dde6ef;
     background-image: #dde6ef;
@@ -152,6 +151,11 @@
     position: absolute;
     margin-left:20px;
   }
+
+   .slider-heading-main1{
+z-index:2000;
+
+   }
   
   .slider1-heading,
   .slider2-heading,
@@ -220,7 +224,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin-top: 120px;
+    margin-top: 150px;
     
     height: 85%;
     width: auto;
@@ -230,7 +234,7 @@
     @include respond(tab-port) {
       display:flex;
 
-      margin-top: 50px;
+      margin-top:70px;
     margin-left:200px;
     
      justify-content: center;
@@ -282,7 +286,8 @@
     data() {
   
       return {
-  
+        
+        comps: '',
   
   
   
@@ -369,6 +374,7 @@
           })
           .to(panel + '-btn', 1.5, {
             y: -10,
+            
             autoAlpha: 1,
             ease: Linear.easeOutIn
           })
