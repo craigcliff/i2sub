@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div class ="container" >
    
      <TheHeader3/>
     <TheSidenav />
@@ -31,6 +31,8 @@ export default{
 </script>
 
 <style scoped>
+
+
 
 
 </style>
