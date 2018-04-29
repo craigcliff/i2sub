@@ -209,7 +209,7 @@ header {
       text-decoration: none;
       padding: 0 2em;
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 500;
 
      
     }
@@ -271,7 +271,7 @@ header {
 
 li:hover ul a {
   //dropdown list style
-  background: #f3f3f3;
+  
   color: #2f3036;
   height: 40px;
   line-height: 40px;

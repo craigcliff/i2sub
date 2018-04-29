@@ -125,6 +125,7 @@
     flex: 1 0 20%;
     height: 100%;
     display: flex;
+    margin-right: 50px;
     flex-direction: column;
     z-index: 2;
     justify-content: center;
@@ -150,7 +151,7 @@
   .slider-heading-main2,
   .slider-heading-main3 {
     position: absolute;
-    margin-left:20px;
+    
   }
 
    .slider-heading-main1{
@@ -165,7 +166,7 @@ z-index:2000;
     opacity: 0;
     padding-top: 15px;
     padding-bottom: 0;
-    line-height: 40px;
+    line-height: 50px;
 
     @include respond(tab-port) {
       font-size: 32px;
