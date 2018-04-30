@@ -58,6 +58,9 @@ height: 60vh;
   align-items: flex-end;
 
 }
+
+
+
 .arrow{
   height: 30vh;
   display: flex;

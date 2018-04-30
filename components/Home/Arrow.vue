@@ -17,6 +17,9 @@
     padding-bottom: 90px;
     height:200px;
     width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
