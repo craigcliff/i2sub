@@ -1,5 +1,5 @@
 <template>
-  <div class = "container-projects">
+  <div class = "container-projects" id="projects">
 
 <h1 class ="heading">Projects</h1>
 

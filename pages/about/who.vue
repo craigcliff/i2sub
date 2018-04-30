@@ -1,5 +1,5 @@
 <template>
-  <div class = "container-who">
+  <div class = "container-who" id="who">
 
 <h1 class ="heading">Who we Are</h1>
 

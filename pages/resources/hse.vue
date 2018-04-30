@@ -1,5 +1,5 @@
 <template>
-  <div class = "container-hse">
+  <div class = "container-hse" id="hse">
 
 <h1 class ="heading">HSE</h1>
 

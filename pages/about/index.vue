@@ -1,11 +1,18 @@
 <template>
-  <section class="main">
+  <section class="main" id="about">
 
   <Slider />
   <Bottom />
-  <what />
+  <what/>
+      <who/>
+      <worldwide/>
+
+ 
+ <!-- <nuxt-child :key="$route[1]"/>
+ <nuxt-child :key="$route.worldwide"/> -->
+  <!-- <what />
   <who />
-  <worldwide />
+  <worldwide /> -->
   <Services />
   
   </section>
@@ -14,11 +21,11 @@
 
 <style>
 
-.main{
+/* .main{
 
   margin-top: 20px;
 }
-  
+   */
 </style>
 
 

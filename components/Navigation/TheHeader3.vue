@@ -13,10 +13,10 @@
                 <li class="nav-item">    <nuxt-link to="/about">About us</nuxt-link>
 
                     <ul class="sub-nav-items">
-                       
-                        <li> <nuxt-link to="/about/who">Who we are</nuxt-link></li>
-                        <li> <nuxt-link to="/about/what">What we do</nuxt-link></li>
-                        <li> <nuxt-link to="/about/worldwide">Worldwide Strength</nuxt-link></li>
+                     
+                        <li> <nuxt-link to="/about/#who" v-scroll-to="'.container-who'">Who we are</nuxt-link ></li>
+                        <li> <nuxt-link to="/about/#what" v-scroll-to="'.container-what'">What we do</nuxt-link></li>
+                        <li> <nuxt-link to="/about/#worldwide" v-scroll-to="'.container-worldwide'">Worldwide Strength</nuxt-link></li>
     
                     </ul>
     
@@ -26,11 +26,11 @@
                     <ul class="sub-nav-items">
 
 
-                        <li> <nuxt-link to="/services/drilling">Drilling</nuxt-link></li>
-                        <li> <nuxt-link to="/services/water">Water Services</nuxt-link></li>
-                        <li> <nuxt-link to="/services/geotechnical">Geotechnical Services</nuxt-link></li>
-                        <li> <nuxt-link to="/services/subsurface">Subsurface Characterization</nuxt-link></li>
-                        <li> <nuxt-link to="/services/oilgas">Oil and Gas Services</nuxt-link></li>
+                        <li> <nuxt-link to="/services/#drilling" v-scroll-to="'.container-drilling'" >Drilling</nuxt-link></li>
+                        <li> <nuxt-link to="/services/#water" v-scroll-to="'.container-water'" >Water Services</nuxt-link></li>
+                        <li> <nuxt-link to="/services/#geotechnical" v-scroll-to="'.container-geotechnical'">Geotechnical Services</nuxt-link></li>
+                        <li> <nuxt-link to="/services/#subsurface" v-scroll-to="'.container-subsurface'">Subsurface Characterization</nuxt-link></li>
+                        <li> <nuxt-link to="/services/#oilandgas" v-scroll-to="'.container-oilandgas'">Oil and Gas Services</nuxt-link></li>
                         
                       
                     </ul>
@@ -38,13 +38,13 @@
     
     
                 </li>
-                <li class="nav-item"><nuxt-link to="/resources">Resources</nuxt-link>
+                <li class="nav-item"><nuxt-link to="/resources#resources" v-scroll-to="'.container-resources'">Resources</nuxt-link>
                     <ul class="sub-nav-items">
                       
-                        <li> <nuxt-link to="/resources/projects">Projects</nuxt-link></li>
-                        <li> <nuxt-link to="/resources/casestudies">Case Studies</nuxt-link></li>
-                        <li> <nuxt-link to="/resources/technical">Technical Drives</nuxt-link></li>
-                        <li> <nuxt-link to="/resources/hse">HSE</nuxt-link></li>
+                        <li> <nuxt-link to="/resources/#projects" v-scroll-to="'.container-projects'">Projects</nuxt-link></li>
+                        <li> <nuxt-link to="/resources/#casestudies" v-scroll-to="'.container-casestudies'">Case Studies</nuxt-link></li>
+                        <li> <nuxt-link to="/resources/#technical" v-scroll-to="'.container-technical'">Technical Drives</nuxt-link></li>
+                        <li> <nuxt-link to="/resources/#hse" v-scroll-to="'.container-hse'">HSE</nuxt-link></li>
     
                     </ul>
                 </li>
@@ -134,7 +134,7 @@ export default {
 <style lang="scss" scoped>
 header {
         padding: 0px 50px;
-  height: 11.5vh;
+  height: 13.5vh;
   background-color: white;
   width: 100vw;
   display: flex;

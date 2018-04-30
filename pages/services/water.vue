@@ -1,5 +1,5 @@
 <template>
-  <div class = "container-water">
+  <div class = "container-water" id="water">
 
 <h1 class ="heading">Water Services</h1>
 
@@ -20,10 +20,17 @@ export default {
 <style scoped>
 
 .container-water{
-  padding: 0px 50px;
-height: 100vh;
 
-background: cadetblue
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(to top right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),url("~/assets/oil2.jpg");
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 

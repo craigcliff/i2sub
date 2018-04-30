@@ -1,5 +1,5 @@
 <template>
-  <div class = "container-technical">
+  <div class = "container-technical" id="technical">
 
 <h1 class ="heading">Technical Drives</h1>
 
