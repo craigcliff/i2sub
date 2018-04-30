@@ -4,7 +4,7 @@
   <div class="chevron" ></div>
   <div class="chevron" ></div>
   <div class="chevron" ></div>
-  <button class="btn-click" v-scroll-to="'.services-title'">Testing</button>
+  
 </div>
     
 </template>
@@ -15,19 +15,12 @@
 .container {
 
     padding-bottom: 90px;
+    height:200px;
+    width: 200px;
 }
 
 
-.btn-click{
-position: relative;
-top:30px;
-width:100px;
-height:100px;
-opacity:0;
-cursor: pointer; 
 
-
-}
 .chevron {
   position: absolute;
   width: 1.3rem;
@@ -56,7 +49,14 @@ cursor: pointer;
   top: 0;
   height: 100%;
   width: 50%;
-  background: #ff7f2a;
+  
+}
+
+.chevron:before,
+.chevron:after{
+
+background: black;
+
 }
 
 .chevron:before {

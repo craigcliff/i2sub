@@ -1,7 +1,9 @@
 <template>
 
 <section class="container"> 
-<Arrow/>
+  
+  
+<Arrow v-scroll-to="'.services-title'"/>
 
 </section>
     
@@ -23,6 +25,17 @@ height: 35.5vh;
 justify-content: center;
   align-items: center;
   
+}
+
+.btn-click{
+position: relative;
+top:30px;
+width:100px;
+height:100px;
+opacity:0;
+cursor: pointer; 
+
+
 }
 
     

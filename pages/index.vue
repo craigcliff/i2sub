@@ -4,11 +4,20 @@
       <logo/>
      
     </div>
+
+<div class ="arrow">
+  <router-link to="/about">
+    <Arrow/>
+    </router-link>
+    </div>
   </section>
 </template>
 
+
+
 <script>
 import Logo from '~/components/Logo.vue'
+ import Arrow from "@/components/Home/Arrow.vue"
 
 
 
@@ -18,9 +27,10 @@ import Logo from '~/components/Logo.vue'
 
 export default {
 
-  layout: 'layout3',
+  // layout: 'layout3',
   components: {
-    Logo
+    Logo,
+     Arrow
   }
 }
 </script>
@@ -30,35 +40,36 @@ export default {
 {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: linear-gradient(to top right, rgb(21, 21, 22), rgba(44, 44, 51, 0.21)),url("~/assets/bg2.jpg");
+  background-image: linear-gradient(to top right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),url("~/assets/bg2.jpg");
   background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   
-  border-left: 30px white solid;
-  border-right: 30px white solid;
-  
-  
-  
 }
 
-.logo-main
-{
-
-  
-  
- 
-}
-
-.svgMain {
-
-width:500px;
-   height:220px
+.logo-main{
+height: 60vh;
+ display: flex;
+ justify-content: center;
+  align-items: flex-end;
 
 }
+.arrow{
+  height: 30vh;
+  display: flex;
+ justify-content: center;
+  align-items: flex-end;
+
+
+}
+  
+  
+  
+
 
 
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TheHeader3 />
+   
 
     <nuxt/>
   </div>
