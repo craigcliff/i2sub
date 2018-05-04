@@ -1,7 +1,14 @@
 <template>
   <section class="main-home">
     <div class="bg-home" v-bind:class="{'bg-home-after':(navState==true)}">
-      <div class="logo-main" :class="{'logo-main-after':(navState==true)}">
+      
+  
+      <!-- <router-link to="/about">
+            
+            </router-link> -->
+    </div>
+
+    <div class="logo-main" :class="{'logo-main-after':(navState==true)}">
         <logo/>
   
       </div>
@@ -12,11 +19,6 @@
   
   
       </div>
-  
-      <!-- <router-link to="/about">
-            
-            </router-link> -->
-    </div>
   
     <div class="blog-section">
   
@@ -101,6 +103,14 @@
 
 
 <script>
+import TimelineMax from "gsap/TimelineMax";
+import {
+  
+    TweenMax
+  
+  } from "gsap";
+
+
   import Logo from "~/components/Logo.vue";
   import Arrow from "@/components/Home/Arrow.vue";
   import {
@@ -113,8 +123,29 @@
       Logo,
       Arrow
     },
-    beforeMount() {
+
+    data(){
+return {
+
+ tl: new TimelineMax({
+  
+          paused: false,
+  
+          reversed: false,
+          repeat: -1,
+          repeatDelay: 1
+  
+        })
+
+}
+
+    },
+
+
+    mounted() {
       this.setNavToFalse();
+      this.moveBackground();
+      
     },
     computed: {
       navState() {
@@ -126,10 +157,23 @@
     methods: {
       setNavToFalse: function() {
         this.$store.commit("navStateFalse");
+        this.moveBackground();
+        this.tl.play();
       },
   
       setNavToTrue: function() {
         this.$store.commit("navStateTrue");
+this.tl.pause();
+      },
+      moveBackground: function(){
+        var spd = 75
+
+        
+this.tl.to(('.bg-home'), spd, {scale: 1.6, x:-400 })
+this.tl.to(('.bg-home'), spd, {scale: 1, x:0 })
+this.tl.to(('.bg-home'), spd, {scale: 1.6, x:+400 })
+
+
       }
     }
   };
@@ -153,6 +197,7 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
+    
   }
   
   .bg-home-after {
@@ -163,10 +208,11 @@
   }
   
   .logo-main {
-    height: 60vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    position: absolute;
+     left: 50%;
+    transform: translate(-50%, 0);
+    top: 40vh;
   }
   
   .logo-main-after {
@@ -174,10 +220,11 @@
   }
   
   .arrow {
-    height: 30vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    position: absolute;
+     left: 50%;
+    transform: translate(-50%, 0);
+    top: 80vh;
   }
   
   .arrow-after {
