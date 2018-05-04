@@ -1,6 +1,6 @@
 <template>
   
-<svg id="svg7275" ref="svgLogo1234" xmlns="http://www.w3.org/2000/svg" height="18.858mm" width="75.498mm" version="1.1" viewBox="0 0 67.497635 16.858498">
+<svg id="svg7275" ref="svgLogo1234" xmlns="http://www.w3.org/2000/svg" height="13.858mm" width="65.498mm" version="1.1" viewBox="0 0 67.497635 16.858498">
  <g id="layer1" transform="translate(-66.793 -111.68)">
   <g id="text373" aria-label="Geotechnical,Drilling,Oil&amp;Gas" transform="matrix(.26068 0 0 .26855 66.293 111.25)" stroke-width=".98524">
    <path id="path7387"  d="m56.707 27.198c0.58323-0.18991 0.73301-1.9142 0.19097-2.1984-0.18053-0.09467-0.32824-0.70369-0.32824-1.3534 0-1.0862-0.42665-1.8497-1.0337-1.8497-0.13524 0-0.62476 0.42149-1.0878 0.93664-0.79793 0.8877-0.82257 1.015-0.47154 2.4371 0.20371 0.82526 0.42272 1.6571 0.48667 1.8486 0.1224 0.36643 1.3639 0.46554 2.2436 0.1791z"/>
