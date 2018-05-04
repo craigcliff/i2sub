@@ -1,6 +1,9 @@
 <template>
     <header>
-        <div class="logo">Logo </div>
+        <div class="logo">
+          
+          <Logo2/>
+           </div>
         <nav class="nav-container">
     
             <ul class="nav-items">
@@ -69,10 +72,12 @@ import { TweenMax } from "gsap";
 import Text from "gsap/TextPlugin";
 import TimelineMax from "gsap/TimelineMax";
 import burger from "~/components/burger.vue";
+import Logo2 from "~/components/Logo2.vue";
 
 export default {
   components: {
-    burger
+    burger,
+    Logo2
   },
 
   data() {
@@ -134,7 +139,7 @@ export default {
 <style lang="scss" scoped>
 header {
         padding: 0px 50px;
-  height: 13.5vh;
+  height: 10.5vh;
   background-color: white;
   width: 100vw;
   display: flex;

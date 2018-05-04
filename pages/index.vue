@@ -19,6 +19,7 @@
   
   
       </div>
+
   
     <div class="blog-section">
   
@@ -104,213 +105,232 @@
 
 <script>
 import TimelineMax from "gsap/TimelineMax";
-import {
-  
-    TweenMax
-  
-  } from "gsap";
+import { TweenMax } from "gsap";
 
+import Logo from "~/components/Logo.vue";
+import Arrow from "@/components/Home/Arrow.vue";
+import { mapState } from "vuex";
 
-  import Logo from "~/components/Logo.vue";
-  import Arrow from "@/components/Home/Arrow.vue";
-  import {
-    mapState
-  } from "vuex";
-  
-  export default {
-    layout: "layout3",
-    components: {
-      Logo,
-      Arrow
-    },
+export default {
+  layout: "layout3",
+  components: {
+    Logo,
+    Arrow
+  },
 
-    data(){
-return {
+  data() {
+    return {
+      tl: new TimelineMax({
+        paused: false,
 
- tl: new TimelineMax({
-  
-          paused: false,
-  
-          reversed: false,
-          repeat: -1,
-          repeatDelay: 1
-  
-        })
+        reversed: false,
+        repeat: -1,
+        repeatDelay: 1
+      })
+    };
+  },
 
-}
+  mounted() {
+    this.setNavToFalse();
+    this.moveBackground();
+    
+  },
+  computed: {
+    navState() {
+      console.log(this.$store.state.navState);
+      return this.$store.state.navState;
+    }
+  },
 
-    },
-
-
-    mounted() {
-      this.setNavToFalse();
+  methods: {
+    setNavToFalse: function() {
+      this.$store.commit("navStateFalse");
       this.moveBackground();
+      this.tl.play();
       
     },
-    computed: {
-      navState() {
-        console.log(this.$store.state.navState);
-        return this.$store.state.navState;
-      }
+
+    setNavToTrue: function() {
+      this.$store.commit("navStateTrue");
+      this.tl.pause();
+   
     },
-  
-    methods: {
-      setNavToFalse: function() {
-        this.$store.commit("navStateFalse");
-        this.moveBackground();
-        this.tl.play();
-      },
-  
-      setNavToTrue: function() {
-        this.$store.commit("navStateTrue");
-this.tl.pause();
-      },
-      moveBackground: function(){
-        var spd = 75
+    moveBackground: function() {
+      var spd = 75;
+  this.tl.from("#path7385", 1, {fill:"black", delay:0.5});
 
-        
-this.tl.to(('.bg-home'), spd, {scale: 1.6, x:-400 })
-this.tl.to(('.bg-home'), spd, {scale: 1, x:0 })
-this.tl.to(('.bg-home'), spd, {scale: 1.6, x:+400 })
+  this.tl.from("#svg7275", 1, {width:3000, height: 13000, scale:300});
+      this.tl.to(".bg-home", spd, { scale: 1.6, x: -400 });
+      this.tl.to(".bg-home", spd, { scale: 1, x: 0 });
+      this.tl.to(".bg-home", spd, { scale: 1.6, x: +400 });
+    
+    },
 
+    readRefs: function(){
 
-      }
+      console.log(this.$refs.svgLogo1234);
     }
-  };
+  }
+};
 </script>
 
-<style scoped>
-  .main-home {
-    height: 100vh;
-  }
-  
-  .bg-home {
-    padding: 0px 0px;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: linear-gradient( to top right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("~/assets/bg2.jpg");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-  }
-  
-  .bg-home-after {
-    height: 60vh;
-    background-image: linear-gradient( to top right, rgba(46, 32, 32, 0.7), rgba(255, 255, 255, 0.7)), url("~/assets/bg2.jpg");
-    transition: all 0.6s;
-    background-position: bottom;
-  }
-  
-  .logo-main {
-    display: flex;
-    position: absolute;
-     left: 50%;
-    transform: translate(-50%, 0);
-    top: 40vh;
-  }
-  
-  .logo-main-after {
-    display: none;
-  }
-  
-  .arrow {
-    display: flex;
-    position: absolute;
-     left: 50%;
-    transform: translate(-50%, 0);
-    top: 80vh;
-  }
-  
-  .arrow-after {
-    display: none;
-  }
-  
-  .blog-section {
-    padding: 0px 50px;
-    padding-top: 100px;
-    display: flex;
-  }
-  
-  .blog-spotlight {
-    flex: 2;
-  }
-  
-  .blog-insights {
-    flex: 2;
-  }
-  
-  .blog-news {
-    flex: 1;
-  }
-  
-  .blog-spotlight,
-  .blog-insights,
-  .blog-news {
-    display:none;
-    flex-direction: column;
-    margin: 15px;
-    border: 1.5px lightgrey solid;
-    border-radius: 5px;
-  }
+
+
+
+
+
+<style lang="scss" scoped>
+
+button{
+  position: relative;
+
+}
+.main-home {
+  height: 100vh;
+}
+
+.bg-home {
+  padding: 0px 0px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(
+      to top right,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("~/assets/bg2.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-home-after {
+  height: 60vh;
+  background-image: linear-gradient(
+      to top right,
+      rgba(46, 32, 32, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("~/assets/bg2.jpg");
+  transition: all 0.6s;
+  background-position: bottom;
+}
+
+.logo-main {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 40vh;
+}
+
+.logo-main-after {
+  display: none;
+}
+
+.arrow {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 80vh;
+}
+
+.arrow-after {
+  display: none;
+}
+
+.blog-section {
+  padding: 0px 50px;
+  padding-top: 100px;
+  display: flex;
+}
+
+.blog-spotlight {
+  flex: 2;
+}
+
+.blog-insights {
+  flex: 2;
+}
+
+.blog-news {
+  flex: 1;
+}
+
+.blog-spotlight,
+.blog-insights,
+.blog-news {
+  display: none;
+  flex-direction: column;
+  margin: 15px;
+  border: 1.5px lightgrey solid;
+  border-radius: 5px;
+}
 
 .blog-spotlight-after,
-  .blog-insights-after,
-  .blog-news-after
-  {
-    transition: all 1s;
-display: flex;
+.blog-insights-after,
+.blog-news-after {
+  transition: all 1s;
+  display: flex;
+}
 
-  }
+.spotlight-heading,
+.insights-heading,
+.news-heading {
+  background: linear-gradient(
+    to bottom,
+    rgba(221, 230, 239, 1) 0%,
+    rgba(181, 198, 208, 1) 51%,
+    rgba(221, 230, 239, 1) 77%,
+    rgba(224, 239, 249, 1) 100%
+  );
+  height: 5vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  
-  .spotlight-heading,
-  .insights-heading,
-  .news-heading {
-    background: linear-gradient( to bottom, rgba(221, 230, 239, 1) 0%, rgba(181, 198, 208, 1) 51%, rgba(221, 230, 239, 1) 77%, rgba(224, 239, 249, 1) 100%);
-    height: 5vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .news-heading {
-    background: linear-gradient( to bottom, rgba(242, 246, 248, 1) 0%, rgba(255, 255, 255, 1) 4%, rgba(227, 227, 227, 1) 99%, rgba(224, 239, 249, 1) 100%);
-  }
-  
-  .spotlight-image,
-  .insights-image {
-    background-image: url("~/assets/bg1.jpg");
-    height: 20vh;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 30px;
-  }
-  
-  .insights-image {
-    background-image: url("~/assets/bg4.jpg");
-  }
-  
-  .spotlight-info,
-  .insights-info,
-  .news-info {
-    margin: 30px;
-    text-align: justify;
-  }
+.news-heading {
+  background: linear-gradient(
+    to bottom,
+    rgba(242, 246, 248, 1) 0%,
+    rgba(255, 255, 255, 1) 4%,
+    rgba(227, 227, 227, 1) 99%,
+    rgba(224, 239, 249, 1) 100%
+  );
+}
 
-  li {
+.spotlight-image,
+.insights-image {
+  background-image: url("~/assets/bg1.jpg");
+  height: 20vh;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 30px;
+}
 
-    margin-bottom: 10px;
-  }
+.insights-image {
+  background-image: url("~/assets/bg4.jpg");
+}
 
+.spotlight-info,
+.insights-info,
+.news-info {
+  margin: 30px;
+  text-align: justify;
+}
 
- 
+li {
+  margin-bottom: 10px;
+}
+
 
 </style>
