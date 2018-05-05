@@ -183,13 +183,14 @@ z-index:2000;
   .slider1-desc,
   .slider2-desc,
   .slider3-desc {
-    font-size: 25px;
+    font-size: 18px;
     opacity: 0;
     padding-top: 15px;
     font-weight: 200;
     padding-bottom: 0;
+    padding-top:30px;
      padding-right: 50px;
-    line-height: 40px;
+   
 
     @include respond(tab-port) {
       font-size: 15px;
@@ -207,7 +208,7 @@ z-index:2000;
   .slider2-btn,
   .slider3-btn {
     opacity: 0;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 0;
 
      @include respond(phone) {
@@ -365,16 +366,16 @@ z-index:2000;
           })
   
           .to(panel + '-heading', .5, {
-            y: -10,
+            y: 10,
             autoAlpha: 1,
             ease: Linear.easeOutIn
           })
-          .to(panel + '-desc', 1, {
-            y: -10,
+          .to(panel + '-desc', .5, {
+            y: -5,
             autoAlpha: 1,
             ease: Linear.easeOutIn
           })
-          .to(panel + '-btn', 1.5, {
+          .to(panel + '-btn', .5, {
             y: -10,
             
             autoAlpha: 1,
@@ -390,12 +391,12 @@ z-index:2000;
             autoAlpha: 0,
             ease: Back.easeInOut
           })
-          .to(panel + '-desc', 0.8, {
+          .to(panel + '-desc', 0.4, {
             y: -10,
             autoAlpha: 0,
             ease: Back.easeInOut
           })
-          .to(panel + '-btn', 1.3, {
+          .to(panel + '-btn', 0.4, {
             y: -10,
             opacity: 0,
             autoAlpha: 0,

@@ -139,7 +139,7 @@ export default {
 
   mounted() {
     this.setNavToFalse();
-    this.moveBackground();
+    // this.moveBackground();
     this.animateLogo();
     
   },
@@ -153,14 +153,14 @@ export default {
   methods: {
     setNavToFalse: function() {
       this.$store.commit("navStateFalse");
-      this.moveBackground();
-      this.tl.play();
+      // this.moveBackground();
+      // this.tl.play();
       
     },
 
     setNavToTrue: function() {
       this.$store.commit("navStateTrue");
-      this.tl.stop();
+      // this.tl.stop();
    
     },
     moveBackground: function() {
@@ -236,7 +236,9 @@ button{
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  top: 40vh;
+  top: 30vh;
+
+  
 }
 
 .logo-main-after {
