@@ -24,6 +24,13 @@
 
 <style scoped lang ="scss">
 
+ #path7385{
+
+  fill: $color-primary;
+
+ 
+}
+
 #svg7275{
 
  height:64px;

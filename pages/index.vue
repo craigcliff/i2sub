@@ -174,9 +174,10 @@ export default {
 
     animateLogo: function(){
         
-
-  this.tl2.from("#svg7275", 1, {fillOpacity: 0,width:3000, height: 13000, scale:300, });
-  this.tl2.to("#path7385", 1, { fillOpacity: 1});
+this.tl2.from("#svg7275", 3, { fillOpacity: 0, width:3000, height: 13000, scale:3001 })
+        .to("#svg7275", 3, { fillOpacity: 1 }, 1 )
+  
+  this.tl2.to("#path7385", 1, { fillOpacity: 0.9});
   this.tl2.staggerFrom("#path7335, #path7333, #path7311, #path7307, #path1563", 4, { fillOpacity:0, left:'100'}, 0.2);
     }
   }
@@ -219,7 +220,7 @@ button{
 }
 
 .bg-home-after {
-  height: 60vh;
+  max-height: 55vh;
   background-image: linear-gradient(
       to top right,
       rgba(46, 32, 32, 0.7),
