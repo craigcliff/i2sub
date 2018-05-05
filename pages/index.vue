@@ -126,6 +126,13 @@ export default {
         reversed: false,
         repeat: -1,
         repeatDelay: 1
+      }),
+      tl2: new TimelineMax({
+        paused: false,
+
+        reversed: false,
+        repeat: 0,
+        repeatDelay: 1
       })
     };
   },
@@ -133,6 +140,7 @@ export default {
   mounted() {
     this.setNavToFalse();
     this.moveBackground();
+    this.animateLogo();
     
   },
   computed: {
@@ -152,23 +160,24 @@ export default {
 
     setNavToTrue: function() {
       this.$store.commit("navStateTrue");
-      this.tl.pause();
+      this.tl.stop();
    
     },
     moveBackground: function() {
       var spd = 75;
-  this.tl.from("#path7385", 1, {fill:"black", delay:0.5});
 
-  this.tl.from("#svg7275", 1, {width:3000, height: 13000, scale:300});
       this.tl.to(".bg-home", spd, { scale: 1.6, x: -400 });
       this.tl.to(".bg-home", spd, { scale: 1, x: 0 });
       this.tl.to(".bg-home", spd, { scale: 1.6, x: +400 });
     
     },
 
-    readRefs: function(){
+    animateLogo: function(){
+        
 
-      console.log(this.$refs.svgLogo1234);
+  this.tl2.from("#svg7275", 1, {fillOpacity: 0,width:3000, height: 13000, scale:300, });
+  this.tl2.to("#path7385", 1, { fillOpacity: 1});
+  this.tl2.staggerFrom("#path7335, #path7333, #path7311, #path7307, #path1563", 4, { fillOpacity:0, left:'100'}, 0.2);
     }
   }
 };

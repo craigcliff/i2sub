@@ -154,6 +154,7 @@ header {
   // }
   @include respond(tab-port) {
     flex-direction: column;
+    padding: 0px 20px;
     //  height: 100vh;
   }
 }
