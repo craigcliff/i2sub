@@ -37,8 +37,8 @@
 width:255px;
 
 @include respond(tab-port) {
-    height:60px;
-width:150px;
+    height:70px;
+width:200px;
     
 }
 }
