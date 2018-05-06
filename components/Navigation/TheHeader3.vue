@@ -230,7 +230,7 @@
 <style lang="scss" scoped>
   header {
     padding: 0px 50px;
-    height: 10.5vh;
+    height: 100px;
     background-color: white;
     width: 100vw;
     display: flex;
@@ -244,7 +244,7 @@
     //     height: 100vh;
     // }
     @include respond(tab-port) {
-      height: 9.8vh;
+      height: 65px;
       flex-direction: column;
       padding: 0px 20px;
       //  height: 100vh;
