@@ -4,6 +4,8 @@
           
           <Logo2/>
            </div>
+
+            
         <nav class="nav-container">
     
             <ul class="nav-items">
@@ -13,8 +15,10 @@
   
     
                 </li>
-                <li class="nav-item">    <nuxt-link to="/about">About us</nuxt-link>
-
+                <li class="nav-item">    <nuxt-link to="/about">About us
+                 <span class="toggle">Expand</span><span class="caret"></span>
+                </nuxt-link>
+                
                     <ul class="sub-nav-items">
                      
                         <li> <nuxt-link to="/about/#who" v-scroll-to="'.container-who'">Who we are</nuxt-link ></li>
@@ -24,7 +28,9 @@
                     </ul>
     
                 </li>
-               <li class="nav-item">    <nuxt-link to="/services">Our Services</nuxt-link>
+               <li class="nav-item">    <nuxt-link to="/services">Our Services
+               <span class="toggle">Expand</span><span class="caret"></span>
+               </nuxt-link>
     
                     <ul class="sub-nav-items">
 
@@ -41,7 +47,9 @@
     
     
                 </li>
-                <li class="nav-item"><nuxt-link to="/resources#resources" v-scroll-to="'.container-resources'">Resources</nuxt-link>
+                <li class="nav-item"><nuxt-link to="/resources#resources" v-scroll-to="'.container-resources'">Resources
+                <span class="toggle">Expand</span><span class="caret"></span>
+                </nuxt-link>
                     <ul class="sub-nav-items">
                       
                         <li> <nuxt-link to="/resources/#projects" v-scroll-to="'.container-projects'">Projects</nuxt-link></li>
@@ -117,6 +125,7 @@ export default {
       this.tl.to(".nav-items", 0.1, {
         css: {
           opacity: 1,
+        
           ease: Elastic.easeOut
         }
       });
@@ -127,7 +136,7 @@ export default {
       } else if (val === false) {
         //TweenMax.staggerTo(".nav-item", 0.5, {opacity:0, y:-100, ease:Back.easeIn}, 0.1);
 
-        this.tl.reverse();
+        this.tl.reverse().timeScale(10);
         console.log("hello");
       }
     }
@@ -153,11 +162,31 @@ header {
   //     height: 100vh;
   // }
   @include respond(tab-port) {
+    height: 9vh;
     flex-direction: column;
     padding: 0px 20px;
     //  height: 100vh;
   }
 }
+
+.caret {
+     border-bottom: 4px solid transparent;
+            border-top: 4px solid #ff7f2a;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+            border-radius: 1px;
+            content: "";
+            display: inline-block;
+            height: 0;
+            margin: 0 0 0 .25rem;
+            transition: 250ms all ease;
+            width: 0;
+            vertical-align: middle;
+}
+
+.toggle {
+            display: none;
+        }
 
 
 
@@ -199,15 +228,22 @@ header {
   padding: 0;
 
   @include respond(tab-port) {
+  
     display: block;
-    opacity: 0;
+    opacity:0;
+   
     font-size: 34px;
   }
   & li {
     line-height: 2.6em;
 
+
     @include respond(tab-port) {
-      padding-bottom: 50px;
+     
+line-height: 1.5em;
+width: 100%;
+border-bottom: $color-secondary-light solid 1px;
+
     }
     & a {
       color: $color-black;
@@ -216,10 +252,12 @@ header {
       padding: 0 2em;
       font-size: 16px;
       font-weight: 500;
+     
 
      
     }
     & ul{
+       
 
 
 
@@ -236,7 +274,12 @@ header {
         margin-right:30px;
          border-bottom: $color-secondary-light solid 1px;
         
-         
+         @include respond(tab-port) {
+           padding:0;
+           margin:0;
+           border-bottom: $color-secondary-light solid 1px;
+     
+    }
 
 
 
@@ -251,15 +294,28 @@ header {
         }
 
        
-
+@include respond(desktop){
     &:hover > a {
       transition: 0.3s all ease-in-out;
       color: $color-primary;
+
+      & span.caret{
+border-top-color: black;
+            transform: rotate(270deg);
+
+      }
     }
+  }
   }
 
   & > li:not(:last-child) {
     border-right: 1px solid $color-secondary-light;
+    
+@include respond(tab-port) {
+    border-right: 0;
+  }
+
+
   }
 }
 
@@ -274,6 +330,7 @@ header {
 
 /*Prevent text wrapping*/
 
+@include respond(desktop){
 
 li:hover ul a {
   //dropdown list style
@@ -293,8 +350,10 @@ li:hover ul a {
   display: flex;
   flex-direction: column;
 }
+}
 
 .burger {
+  padding-top: 5px;
   height: 40px;
   width: 60px;
   display: none;
