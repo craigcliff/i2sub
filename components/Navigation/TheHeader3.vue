@@ -290,7 +290,7 @@
       height: 90.5vh;
       align-items: space-around;
       justify-content: center;
-      padding-top: 5vh;
+      padding-top: 35px;
     }
   }
   
