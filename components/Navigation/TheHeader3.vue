@@ -16,10 +16,10 @@
     
                 </li>
                 <li class="nav-item">    <nuxt-link to="/about">About us
-                 <span class="toggle">Expand</span><span class="caret"></span>
+                 <span class="toggle">Expand</span><span class="caret" @click="toggleSubNavMobile1"></span>
                 </nuxt-link>
                 
-                    <ul class="sub-nav-items">
+                    <ul class="sub-nav-items " v-bind:class="{'display-subNav-mobile': subNavMobile1}" >
                      
                         <li> <nuxt-link to="/about/#who" v-scroll-to="'.container-who'">Who we are</nuxt-link ></li>
                         <li> <nuxt-link to="/about/#what" v-scroll-to="'.container-what'">What we do</nuxt-link></li>
@@ -29,10 +29,10 @@
     
                 </li>
                <li class="nav-item">    <nuxt-link to="/services">Our Services
-               <span class="toggle">Expand</span><span class="caret"></span>
+               <span class="toggle">Expand</span><span class="caret"  @click="toggleSubNavMobile2"></span>
                </nuxt-link>
     
-                    <ul class="sub-nav-items">
+                    <ul class="sub-nav-items  " v-bind:class="{'display-subNav-mobile': subNavMobile2}">
 
 
                         <li> <nuxt-link to="/services/#drilling" v-scroll-to="'.container-drilling'" >Drilling</nuxt-link></li>
@@ -48,9 +48,9 @@
     
                 </li>
                 <li class="nav-item"><nuxt-link to="/resources#resources" v-scroll-to="'.container-resources'">Resources
-                <span class="toggle">Expand</span><span class="caret"></span>
+                <span class="toggle">Expand</span><span class="caret" @click="toggleSubNavMobile3" ></span>
                 </nuxt-link>
-                    <ul class="sub-nav-items">
+                    <ul class="sub-nav-items " v-bind:class="{'display-subNav-mobile': subNavMobile3}">
                       
                         <li> <nuxt-link to="/resources/#projects" v-scroll-to="'.container-projects'">Projects</nuxt-link></li>
                         <li> <nuxt-link to="/resources/#casestudies" v-scroll-to="'.container-casestudies'">Case Studies</nuxt-link></li>
@@ -91,6 +91,9 @@ export default {
   data() {
     return {
       active: false,
+      subNavMobile1:false,
+       subNavMobile2:false,
+        subNavMobile3:false,
       tl: new TimelineMax({
         paused: false
         // repeat:-1
@@ -113,8 +116,51 @@ export default {
       // TweenMax.staggerTo(".nav-item", 0.5, {opacity:0, y:-100, ease:Back.easeIn}, 0.1);
 
       // }
+    },
+    toggleSubNavMobile1: function() {
+      this.subNavMobile1 = !this.subNavMobile1;
+      console.log(this.subNavMobile);
+
+      //       if (this.active = true){
+      // this.tl.staggerFrom(".nav-item", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
+      // }
+      // else{
+
+      // TweenMax.staggerTo(".nav-item", 0.5, {opacity:0, y:-100, ease:Back.easeIn}, 0.1);
+
+      // }
+    },
+    toggleSubNavMobile2: function() {
+      this.subNavMobile2 = !this.subNavMobile2;
+      console.log(this.subNavMobile);
+
+      //       if (this.active = true){
+      // this.tl.staggerFrom(".nav-item", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
+      // }
+      // else{
+
+      // TweenMax.staggerTo(".nav-item", 0.5, {opacity:0, y:-100, ease:Back.easeIn}, 0.1);
+
+      // }
+    },
+    toggleSubNavMobile3: function() {
+      this.subNavMobile3 = !this.subNavMobile3;
+      console.log(this.subNavMobile);
+
+      //       if (this.active = true){
+      // this.tl.staggerFrom(".nav-item", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
+      // }
+      // else{
+
+      // TweenMax.staggerTo(".nav-item", 0.5, {opacity:0, y:-100, ease:Back.easeIn}, 0.1);
+
+      // }
     }
-  },
+
+  }
+  
+  
+  ,
   watch: {
     active: function(val) {
       this.tl.to("header", 0.1, {
@@ -162,7 +208,7 @@ header {
   //     height: 100vh;
   // }
   @include respond(tab-port) {
-    height: 9vh;
+    height: 9.8vh;
     flex-direction: column;
     padding: 0px 20px;
     //  height: 100vh;
@@ -182,6 +228,16 @@ header {
             transition: 250ms all ease;
             width: 0;
             vertical-align: middle;
+
+
+            @include respond(tab-port) {
+              
+              float:right;
+              position: relative;
+              top: 5vh;
+              
+// display: none;
+            }
 }
 
 .toggle {
@@ -203,9 +259,10 @@ header {
    
   @include respond(tab-port) {
     display: flex;
-    height: 92.5vh;
-    align-items: center;
+    height: 90.5vh;
+    align-items: space-around;
     justify-content: center;
+    padding-top:5vh;
   }
 }
 
@@ -217,7 +274,22 @@ header {
   display: none;
   background-color: white;
   z-index: 300;
+  transition: all 2s;
+
+
+  
+  
 }
+
+ @include respond(tab-port) {
+    
+    .display-subNav-mobile{
+  display: block;
+  
+  
+
+    }
+  }
 
 .nav-items {
   display: flex;
@@ -240,7 +312,7 @@ header {
 
     @include respond(tab-port) {
      
-line-height: 1.5em;
+line-height: 2em;
 width: 100%;
 border-bottom: $color-secondary-light solid 1px;
 
@@ -253,9 +325,15 @@ border-bottom: $color-secondary-light solid 1px;
       font-size: 16px;
       font-weight: 500;
      
-
+  @include respond(tab-port) {
+     padding-left: 0px;
+     padding-right: 100px;
+font-size: 20px;
+    }
      
     }
+
+   
     & ul{
        
 
@@ -323,8 +401,9 @@ border-top-color: black;
 
 .displayNavItems {
   @include respond(tab-port) {
-    display: block;
+    display: flex;
     flex-direction: column;
+
   }
 }
 
@@ -351,6 +430,8 @@ li:hover ul a {
   flex-direction: column;
 }
 }
+
+
 
 .burger {
   padding-top: 5px;
