@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "i2sub website",
   "author": "Craig",
-  "private": true,
+  "private": false,
+  
   "scripts": {
-    "dev": "nuxt",
+    "dev": "cross-env HOST=0.0.0.0 PORT=3333 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
@@ -17,7 +18,7 @@
     "vue-scrollto": "^2.11.0"
   },
   "devDependencies": {
-    "cross-env": "^5.0.1",
+    "cross-env": "^5.1.4",
     "node-sass": "^4.8.3",
     "sass-loader": "^7.0.1"
   }

@@ -204,7 +204,7 @@
       active: function(val) {
         this.tl.to("header", 0.6, {
           css: {
-            height: "100%"
+            minHeight: "800px"
           }
         });
         this.tl.staggerTo(".nav-item1, .nav-item2,.nav-item3, .nav-item4,.nav-item5, .social-media-icons", 0.1, {
@@ -246,7 +246,10 @@
     @include respond(tab-port) {
       height: 65px;
       flex-direction: column;
+      justify-content: flex-start;
+     
       padding: 0px 20px;
+      
       //  height: 100vh;
     }
   }
@@ -280,17 +283,15 @@
     width: 20%;
     @include respond(tab-port) {
       align-self: flex-start;
-      height: 7.5vh;
+ 
     }
   }
   
   .nav-container {
     @include respond(tab-port) {
-      display: flex;
-      height: 90.5vh;
-      align-items: space-around;
-      justify-content: center;
-      padding-top: 35px;
+     
+     
+      
     }
   }
   
@@ -335,6 +336,7 @@
     margin: 0;
     padding: 0;
     @include respond(tab-port) {
+      padding-top:35px;
       display: block;
       font-size: 34px;
     }
