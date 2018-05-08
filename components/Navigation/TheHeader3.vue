@@ -230,7 +230,7 @@
 <style lang="scss" scoped>
   header {
     padding: 0px 50px;
-    height: 100px;
+    height: 70px;
     background-color: white;
     width: 100vw;
     display: flex;
@@ -251,6 +251,11 @@
       padding: 0px 20px;
       
       //  height: 100vh;
+    }
+
+
+    @include respond(big-desktop) {
+      height: 90px;
     }
   }
   

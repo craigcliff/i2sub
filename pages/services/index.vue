@@ -370,6 +370,19 @@ margin-bottom: 20px;
       justify-content: space-between;
     }
   }
+
+  .services-card-1,.services-card-2,.services-card-3,.services-card-4,.services-card-5{
+    box-shadow: .8px .9px 10px grey;
+   transition:  box-shadow .5s ease-out;
+
+&:hover{
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+transition:  box-shadow .5s ease-in;
+
+}
+
+
+  }
   
   .services-card {
     
@@ -388,8 +401,9 @@ max-width: 230px;
 
 
 
+
     // border: 1px solid $color-secondary-dark;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+
     display: flex;
     flex-direction: column;
     &-image {

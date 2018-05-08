@@ -34,13 +34,22 @@
 #svg7275{
 
  height:64px;
-width:255px;
+width: 200px;
 
 @include respond(tab-port) {
     height:70px;
 width:150px;
     
 }
+
+ @include respond(big-desktop) {
+      height:64px;
+width:255px;
+     
+    }
+  
+
+
 }
 
 </style>

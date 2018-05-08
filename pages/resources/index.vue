@@ -267,8 +267,8 @@ margin-bottom: 20px;
     margin-bottom: 30px;
     margin-left: 15px;
     margin-right: 15px;
-    border:$color-secondary-light solid 1px;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    // border:$color-secondary-light solid 1px;
+    // box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 
     
     &-image {
@@ -358,6 +358,7 @@ margin-bottom: 20px;
       &-button{
         
  flex:2;
+ margin-bottom:10px;
 
  
 
@@ -387,6 +388,7 @@ margin-bottom: 20px;
      @include respond(big-desktop) {
      font-size: 15px;
     padding: 10px 24px;
+   
     }
   }
   
@@ -406,7 +408,18 @@ margin-bottom: 20px;
   .resource-4 {
 
 position: relative;
+// border:$color-secondary-light solid 1px;
 
+  transition:  box-shadow .5s ease-out;
+     box-shadow: .8px .9px 10px grey;
+
+    // box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+
+    &:hover{
+box-shadow: 1px 8px 30px grey;
+transition:  box-shadow .5s ease-in;
+
+    }
     
   }
 </style>
