@@ -44,7 +44,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     }
 
     @if $breakpoint == desktop {
-        @media only screen and (min-width:68.75em) { @content };    //11200px
+        @media only screen and (min-width:68.75em) { @content };    //1200px
     }
 
 

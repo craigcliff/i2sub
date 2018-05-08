@@ -4,7 +4,6 @@
   "description": "i2sub website",
   "author": "Craig",
   "private": false,
-  
   "scripts": {
     "dev": "cross-env HOST=0.0.0.0 PORT=3333 nuxt",
     "build": "nuxt build",
