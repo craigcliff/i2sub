@@ -144,6 +144,12 @@
   import projects from "@/pages/resources/projects.vue"
   import technical from "@/pages/resources/technical.vue"
   import casestudies from "@/pages/resources/casestudies.vue"
+  import {
+    TweenMax
+  } from "gsap";
+  
+  
+  import TimelineMax from "gsap/TimelineMax";
   
   
   export default {
@@ -155,7 +161,54 @@
       casestudies
   
   
-    }
+    },
+
+     data() {
+      return {
+        
+        tl: new TimelineMax({
+          paused: false
+          // repeat:-1
+        })
+      };
+    },
+
+     mounted() {
+       this.staggerResources();
+
+     },
+  
+    methods: {
+      staggerResources: function(){
+
+        this.tl.from(".resource-1", 1, {
+          right: 20,opacity:0
+          
+        },0.4).
+        from(".resource-2", 1, {
+          left: 20,opacity:0
+          
+        },0.8).
+        from(".resource-3", 1, {
+          right: 20,opacity:0
+          
+        },1.2).
+        from(".resource-4", 1, {
+          left: 20,opacity:0
+          
+        },1.6)
+
+
+
+        ;
+
+
+      }
+
+
+
+
+     }
   }
 </script>
 
@@ -351,6 +404,9 @@ margin-bottom: 20px;
   .resource-2,
   .resource-3,
   .resource-4 {
+
+position: relative;
+
     
   }
 </style>

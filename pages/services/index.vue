@@ -257,6 +257,12 @@
   import geotechnical from "@/pages/services/geotechnical.vue";
   import subsurface from "@/pages/services/subsurface.vue";
   import oilandgas from "@/pages/services/oilgas.vue";
+  import {
+    TweenMax
+  } from "gsap";
+  
+  
+  import TimelineMax from "gsap/TimelineMax";
   export default {
     layout: "layout3",
   
@@ -266,7 +272,43 @@
       geotechnical,
       subsurface,
       oilandgas
-    }
+    },
+
+     data() {
+      return {
+        
+        tl: new TimelineMax({
+          paused: false
+          // repeat:-1
+        })
+      };
+    },
+
+     mounted() {
+       this.staggerServices();
+
+     },
+  
+    methods: {
+      staggerServices: function(){
+
+        this.tl.staggerFrom(".services-card", 1, {
+          top: 40,opacity:0
+          
+        },0.4);
+
+
+      }
+
+
+
+
+     }
+
+
+
+
+
   };
 </script>
 
@@ -282,9 +324,10 @@
     align-items: center;
     justify-content: center;
     padding: 0px 50px;
+    
 
-    background-color: #dde6ef;
-background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.21'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+   background-color: #dde6ef;
+background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.17'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
   
   .services-heading {
@@ -332,6 +375,11 @@ margin-bottom: 20px;
     
 max-width: 230px;
     height: 420px;
+   
+    position: relative;
+    
+    
+   
 
 @include respond(big-desktop) {
       max-width: 330px;
