@@ -166,9 +166,9 @@ export default {
     moveBackground: function() {
       var spd = 75;
 
-      this.tl.to(".bg-home", spd, { scale: 1.6, x: -400 });
-      this.tl.to(".bg-home", spd, { scale: 1, x: 0 });
-      this.tl.to(".bg-home", spd, { scale: 1.6, x: +400 });
+      this.tl.to(".bg-home", spd, { scaleY: 0.5});
+      // this.tl.to(".bg-home", spd, { scale: 1, x: 0 });
+      // this.tl.to(".bg-home", spd, { scale: 1.6, x: +400 });
     
     },
 

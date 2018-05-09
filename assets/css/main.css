@@ -4,6 +4,35 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Galano";
+
+    src: 
+    url("~assets/fonts/Galano.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Galano-bold";
+
+    src: 
+    url("~assets/fonts/Galano-Bold.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+@font-face {
+    font-family: "Miller-text";
+
+    src: 
+    url("~assets/fonts/Miller-Text.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
 
    
    .page-enter-active, .page-leave-active {

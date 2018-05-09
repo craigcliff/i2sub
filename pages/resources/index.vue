@@ -182,19 +182,19 @@
       staggerResources: function(){
 
         this.tl.from(".resource-1", 1, {
-          right: 20,opacity:0
+          x: -20,opacity:0
           
         },0.4).
         from(".resource-2", 1, {
-          left: 20,opacity:0
+          x: 20,opacity:0
           
         },0.8).
         from(".resource-3", 1, {
-          right: 20,opacity:0
+          x: -20,opacity:0
           
         },1.2).
         from(".resource-4", 1, {
-          left: 20,opacity:0
+          x: 20,opacity:0
           
         },1.6)
 
@@ -339,16 +339,35 @@ margin-bottom: 20px;
       
       &-heading{
         flex:2;
+
+        font-family: Galano-bold,helvetica;
+     font-weight: 400;
+     letter-spacing: 0.1px;
+      color: $color-black;
      
       }
 
       &-desc{
-        margin-top:10px;
+        
         text-align: justify;
          flex:6;
 
+         font-family: Miller-text,helvetica;
+     font-weight: 400;
+
+     font-size: 12px;
+line-height: 16px;
+margin-bottom:15px;
+margin-top:8px;
+     
+
            @include respond(big-desktop) {
       flex:4;
+      font-size: 14px;
+line-height: 20px;
+letter-spacing: .02em;
+      color: $color-black;
+      margin-bottom:30px;
     }
      
          
@@ -357,8 +376,8 @@ margin-bottom: 20px;
 
       &-button{
         
- flex:2;
- margin-bottom:10px;
+ flex:1;
+ margin-bottom:20px;
 
  
 

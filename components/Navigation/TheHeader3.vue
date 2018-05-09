@@ -17,7 +17,7 @@
   
         </li>
         <li class="nav-item nav-item2">
-          <nuxt-link to="/about">About us
+          <nuxt-link to="/about">About Us
             <span class="toggle">Expand</span><span class="caret" @click="toggleSubNavMobile1"></span>
           </nuxt-link>
   
@@ -353,15 +353,23 @@
       }
       & a {
         color: $color-black;
-        font-family: helvetica;
+        font-family: Galano,helvetica;
         text-decoration: none;
         padding: 0 2em;
-        font-size: 16px;
-        font-weight: 500;
+        font-size: 15px;
+        
+        letter-spacing: 0.366667px;
+        
         @include respond(tab-port) {
           padding-left: 0px;
           // padding-right: 100px;
           font-size: 20px;
+        }
+
+        @include respond(big-desktop) {
+     
+          // padding-right: 100px;
+          font-size: 18px;
         }
       }
       & ul {
@@ -386,7 +394,7 @@
         }
       }
       & ul li a {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
         padding-left: 15px;
         white-space: nowrap;
@@ -452,11 +460,16 @@
   }
   
   a.nuxt-link-active {
-    color: $color-primary !important;
+    color: $color-black !important;
+    font-family: Galano-bold,helvetica !important;
+    
+  
   }
   
   li.nuxt-link-active a {
-    color: $color-primary !important;
+    color: $color-black !important;
+    font-family: Galano-bold,helvetica !important;
+    font-weight: 400;
   }
 
   .social-media-icons {

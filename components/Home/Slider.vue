@@ -162,11 +162,15 @@ z-index:2000;
   .slider1-heading,
   .slider2-heading,
   .slider3-heading {
-    font-size: 42px;
+    font-size: 52px;
     opacity: 0;
     padding-top: 15px;
     padding-bottom: 0;
     line-height: 50px;
+     font-family: Galano-bold,helvetica;
+     font-weight: 400;
+     letter-spacing: 2.08333px;
+     color: $color-black;
 
     @include respond(tab-port) {
       font-size: 32px;
@@ -183,13 +187,16 @@ z-index:2000;
   .slider1-desc,
   .slider2-desc,
   .slider3-desc {
-    font-size: 18px;
+    font-size: 24px;
     opacity: 0;
     padding-top: 15px;
-    font-weight: 200;
+    
     padding-bottom: 0;
     padding-top:30px;
      padding-right: 50px;
+     font-family: Miller-text,helvetica;
+     font-weight: 400;
+     color: $color-black;
    
 
     @include respond(tab-port) {

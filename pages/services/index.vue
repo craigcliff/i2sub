@@ -293,7 +293,7 @@
       staggerServices: function(){
 
         this.tl.staggerFrom(".services-card", 1, {
-          top: 40,opacity:0
+          y: 40,opacity:0
           
         },0.4);
 
@@ -341,6 +341,8 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
     padding:15px 25px;
      margin-top: 100px;
 margin-bottom: 20px;
+
+
 
     @include respond(big-desktop) {
       margin-top: 0px;
@@ -406,6 +408,9 @@ max-width: 230px;
 
     display: flex;
     flex-direction: column;
+
+
+   
     &-image {
       width: 100%;
       height: 40%;
@@ -471,21 +476,52 @@ background-image:  url("~/assets/oil2.jpg");
         width: 100%;
         height: 65%;
        
-        padding-top: 20px;
+        padding-top:15px;
         padding-left: 10px;
         padding-right: 10px;
         text-align: justify;
+
+        font-family: Miller-text,helvetica;
+     font-weight: 400;
+     
+      color: $color-black;
+      font-size: 12px;
+line-height: 14px;
+letter-spacing: .02em;
+
+       @include respond(big-desktop) {
+      font-size: 14px;
+line-height: 22px;
+letter-spacing: .02em;
+    
+    
+    }
         
       }
+
+       &-heading{
+
+font-family: Galano-bold,helvetica;
+     font-weight: 400;
+     letter-spacing: 0.1px;
+      color: $color-black;
+
+    }
     }
     &-button {
       width: 100%;
       height: 20%;
       display: flex;
-      padding-top: 10px;
+      padding-top: 20px;
       justify-content: center;
       align-items: flex-start;
       background-color: white;
+
+      @include respond(big-desktop) {
+      padding-top: 30px;
+    
+    
+    }
     }
   }
   
