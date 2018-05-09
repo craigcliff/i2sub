@@ -162,9 +162,9 @@ z-index:2000;
   .slider1-heading,
   .slider2-heading,
   .slider3-heading {
-    font-size: 52px;
+    font-size: 40px;
     opacity: 0;
-    padding-top: 15px;
+    padding-top: 30px;
     padding-bottom: 0;
     line-height: 50px;
      font-family: Galano-bold,helvetica;
