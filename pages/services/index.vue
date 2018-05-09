@@ -21,8 +21,8 @@
   
   
                 </h1>
-
-                <div class ="services-card-line"> </div>
+  
+                <div class="services-card-line"> </div>
   
                 <p class="services-card-text-desc">
                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
@@ -63,9 +63,9 @@
   
   
                 </h1>
-
-                <div class ="services-card-line"> </div>
-
+  
+                <div class="services-card-line"> </div>
+  
   
                 <p class="services-card-text-desc">
                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
@@ -107,7 +107,7 @@
   
   
                 </h1>
-  <div class ="services-card-line"> </div>
+                <div class="services-card-line"> </div>
                 <p class="services-card-text-desc">
                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
                   content here', making it look like readable English. </p>
@@ -147,7 +147,7 @@
   
   
                 </h1>
-  <div class ="services-card-line"> </div>
+                <div class="services-card-line"> </div>
                 <p class="services-card-text-desc">
                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
                   content here', making it look like readable English. </p>
@@ -173,7 +173,7 @@
   
           </div>
   
-         <div class=" services-card services-card-5">
+          <div class=" services-card services-card-5">
   
             <div class="services-card-image services-card-image5">
   
@@ -187,7 +187,7 @@
   
   
                 </h1>
-  <div class ="services-card-line"> </div>
+                <div class="services-card-line"> </div>
                 <p class="services-card-text-desc">
                   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
                   content here', making it look like readable English. </p>
@@ -273,43 +273,44 @@
       subsurface,
       oilandgas
     },
-
-     data() {
+  
+    data() {
       return {
-        
+  
         tl: new TimelineMax({
           paused: false
           // repeat:-1
         })
       };
     },
-
-     mounted() {
-       this.$store.commit("navStateTrue");
-       this.staggerServices();
-
-     },
+  
+    mounted() {
+      this.$store.commit("navStateTrue");
+      this.staggerServices();
+  
+    },
   
     methods: {
-      staggerServices: function(){
-
+      staggerServices: function() {
+  
         this.tl.staggerFrom(".services-card", 1, {
-          y: 40,opacity:0
-          
-        },0.4);
-
-
+          y: 40,
+          opacity: 0
+  
+        }, 0.4);
+  
+  
       }
-
-
-
-
-     }
-
-
-
-
-
+  
+  
+  
+  
+    }
+  
+  
+  
+  
+  
   };
 </script>
 
@@ -318,132 +319,98 @@
   .container-services {}
   
   .services-main {
-    min-height:100vh;
-
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0px 50px;
-    
-
-   background-color: #dde6ef;
-background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.17'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-color: #dde6ef;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.17'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
   
   .services-heading {
     // color: white;
     // background-color:rgba(0, 0, 0, 0.3);
     height: 20%;
-    
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding:15px 25px;
-     margin-top: 100px;
-margin-bottom: 20px;
-
-
-
+    padding: 15px 25px;
+    
+    margin-bottom: 20px;
+    font-family: Miller-text, helvetica;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 60px;
     @include respond(big-desktop) {
       margin-top: 0px;
-      
-
     }
   }
-
-  .services-card-line{
- 
+  
+  .services-card-line {
     width: 80px;
-    border-bottom:$color-secondary-light solid 1px;
-
+    border-bottom: $color-secondary-light solid 1px;
   }
   
   .card-main {
-    margin-top:10px;
+   
     height: 80%;
     width: 100%;
     display: flex;
-     
     &-services {
       flex: 1;
       display: flex;
-      flex-wrap:wrap;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
     }
   }
-
-  .services-card-1,.services-card-2,.services-card-3,.services-card-4,.services-card-5{
+  
+  .services-card-1,
+  .services-card-2,
+  .services-card-3,
+  .services-card-4,
+  .services-card-5 {
     box-shadow: .8px .9px 10px grey;
-   transition:  box-shadow .5s ease-out;
-
-&:hover{
-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-transition:  box-shadow .5s ease-in;
-
-}
-
-
+    transition: box-shadow .5s ease-out;
+    &:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      transition: box-shadow .5s ease-in;
+    }
   }
   
   .services-card {
-    
-max-width: 230px;
+    max-width: 230px;
     height: 420px;
-   
     position: relative;
-    
-    
-   
-
-@include respond(big-desktop) {
+    @include respond(big-desktop) {
       max-width: 330px;
-    height: 550px;
+      height: 550px;
     }
-
-
-
-
     // border: 1px solid $color-secondary-dark;
-
     display: flex;
     flex-direction: column;
-
-
-   
     &-image {
       width: 100%;
       height: 40%;
-   
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: 100% 100%;
-
-      &1{
-background-image:  url("~/assets/drilling1.jpg");
-
+      &1 {
+        background-image: url("~/assets/drilling1.jpg");
       }
-
-      &2{
-
-        background-image:  url("~/assets/bg5.jpg");
+      &2 {
+        background-image: url("~/assets/bg5.jpg");
       }
-
-      &3{
-background-image:  url("~/assets/geo2.jpg");
-
+      &3 {
+        background-image: url("~/assets/geo2.jpg");
       }
-
-      &4{
-background-image:  url("~/assets/site1.jpg");
-        
+      &4 {
+        background-image: url("~/assets/site1.jpg");
       }
-
-      &5{
-
-background-image:  url("~/assets/oil2.jpg");
-
+      &5 {
+        background-image: url("~/assets/oil2.jpg");
       }
     }
     &-text-container {
@@ -451,7 +418,7 @@ background-image:  url("~/assets/oil2.jpg");
       height: 50%;
       display: flex;
       justify-content: center;
-       background: $color-white;
+      background: $color-white;
     }
     &-text {
       background-color: white;
@@ -469,45 +436,32 @@ background-image:  url("~/assets/oil2.jpg");
         padding-top: 10px;
         justify-content: center;
         text-align: center;
-        
-        
-   
       }
       &-desc {
         width: 100%;
         height: 65%;
-       
-        padding-top:15px;
+        padding-top: 15px;
         padding-left: 10px;
         padding-right: 10px;
         text-align: justify;
-
-        font-family: Miller-text,helvetica;
-     font-weight: 400;
-     
-      color: $color-black;
-      font-size: 12px;
-line-height: 14px;
-letter-spacing: .02em;
-
-       @include respond(big-desktop) {
-      font-size: 14px;
-line-height: 22px;
-letter-spacing: .02em;
-    
-    
-    }
-        
+        font-family: Miller-text, helvetica;
+        font-weight: 400;
+        color: $color-black;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: .02em;
+        @include respond(big-desktop) {
+          font-size: 14px;
+          line-height: 22px;
+          letter-spacing: .02em;
+        }
       }
-
-       &-heading{
-
-font-family: Galano-bold,helvetica;
-     font-weight: 400;
-     letter-spacing: 0.1px;
-      color: $color-black;
-
-    }
+      &-heading {
+        font-family: Galano-bold, helvetica;
+        font-weight: 400;
+        letter-spacing: 0.1px;
+        color: $color-black;
+      }
     }
     &-button {
       width: 100%;
@@ -517,12 +471,9 @@ font-family: Galano-bold,helvetica;
       justify-content: center;
       align-items: flex-start;
       background-color: white;
-
       @include respond(big-desktop) {
-      padding-top: 30px;
-    
-    
-    }
+        padding-top: 30px;
+      }
     }
   }
   
