@@ -208,7 +208,7 @@
           }
         });
         this.tl.staggerTo(".nav-item1, .nav-item2,.nav-item3, .nav-item4,.nav-item5, .social-media-icons", 0.1, {
-          left: 10,opacity:1
+          left: 10,autoAlpha:1,display:"flex"
           
         },0.2);
         //this.tl.staggerFromTo(".nav-item", 2, {scale:0.5, opacity:1, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
@@ -330,7 +330,10 @@
 
   @include respond(tab-port) {
   .nav-item1,.nav-item2,.nav-item3,.nav-item4,.nav-item5   {
-    opacity: 0;
+    opacity:0;
+    visibility:hidden;
+    display: none;
+    
   }
   }
   

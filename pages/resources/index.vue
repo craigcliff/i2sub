@@ -174,6 +174,7 @@
     },
 
      mounted() {
+       this.$store.commit("navStateTrue");
        this.staggerResources();
 
      },

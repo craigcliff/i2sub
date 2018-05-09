@@ -67,8 +67,13 @@ import who from "@/pages/about/who.vue"
     },
   
     mounted() {
+
+
   
-  
+   
+    this.$store.commit("navStateTrue");
+    // this.moveBackground();
+ 
   
   
   

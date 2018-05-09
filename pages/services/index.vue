@@ -285,6 +285,7 @@
     },
 
      mounted() {
+       this.$store.commit("navStateTrue");
        this.staggerServices();
 
      },

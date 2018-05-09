@@ -53,7 +53,7 @@
 <style lang="scss">
   .container3 {
         padding: 0px 50px;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     background-color: #dde6ef;
     background-image: #dde6ef;
@@ -236,8 +236,8 @@ z-index:2000;
     background-position: center;
     margin-top: 150px;
     
-    height: 85%;
-    width: auto;
+    height: 80%;
+    width: 100%;
     visibility: hidden;
     display: none;
     object-fit: cover;
@@ -355,6 +355,7 @@ z-index:2000;
   
   
     },
+  
   
     methods: {
   

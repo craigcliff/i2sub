@@ -1,8 +1,12 @@
 <template>
   <section class="main-home">
-    <div class="bg-home" v-bind:class="{'bg-home-after':(navState==true)}">
+    <div class="bg-home" 
+    
+   
+    
+    >
       
-  
+   <!-- v-bind:class="{'bg-home-after':(navState==true)}" -->
       <!-- <router-link to="/about">
             
             </router-link> -->
@@ -14,7 +18,7 @@
       </div>
   
   
-      <div class="arrow" v-on:click="setNavToTrue" :class="{'arrow-after':(navState==true)}">
+      <div class="arrow" v-on:click="setNavToTrue " :class="{'arrow-after':(navState==true)}">
         <Arrow/>
   
   
@@ -124,7 +128,7 @@ export default {
         paused: false,
 
         reversed: false,
-        repeat: -1,
+        repeat: 0,
         repeatDelay: 1
       }),
       tl2: new TimelineMax({
@@ -137,8 +141,10 @@ export default {
     };
   },
 
+ 
+
   mounted() {
-    this.setNavToFalse();
+    this.$store.commit("navStateFalse");
     // this.moveBackground();
     this.animateLogo();
     
@@ -160,13 +166,18 @@ export default {
 
     setNavToTrue: function() {
       this.$store.commit("navStateTrue");
+      this.moveBackground();
       // this.tl.stop();
    
     },
     moveBackground: function() {
-      var spd = 75;
+      var spd = 0.75;
 
-      this.tl.to(".bg-home", spd, { scaleY: 0.5});
+      this.tl.to(".bg-home", spd, { height: "60%"})
+      .staggerFrom(".blog-insights, .blog-spotlight, .blog-news", 1, {
+          opacity:0
+          
+        },0.4);
       // this.tl.to(".bg-home", spd, { scale: 1, x: 0 });
       // this.tl.to(".bg-home", spd, { scale: 1.6, x: +400 });
     
