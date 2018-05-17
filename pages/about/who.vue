@@ -202,6 +202,7 @@
     flex-direction: row-reverse;
     padding: 0px 50px;
     height:600px;
+    margin-top: 100px;
     
   }
   

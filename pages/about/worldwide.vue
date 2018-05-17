@@ -202,7 +202,7 @@
     display: flex;
     flex-direction: row;
   padding: 0px 50px;
-     margin-top:30px;
+     margin-top:100px;
 
      height:600px;
   }
