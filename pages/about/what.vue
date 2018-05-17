@@ -2,7 +2,7 @@
   <div class = "container-what" id="what">
 
 
-<div class="container-content" id="content">
+
   
        <div class="content-image-container">
       <div class="content-image">
@@ -55,7 +55,7 @@
   
 </div>
 
-      </div>
+     
 
 </template>
 
@@ -198,16 +198,14 @@
 <style scoped lang="scss">
 
 .container-what{
+  display: flex;
+    flex-direction: row;
    padding: 0px 50px;
      margin-top:30px;
+     height:600px;
 
 }
-  .container-content {
  
-    display: flex;
-    flex-direction: row;
- 
-  }
   
   .content-image-container {
     flex: 1;

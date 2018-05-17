@@ -203,6 +203,8 @@
     flex-direction: row;
   padding: 0px 50px;
      margin-top:30px;
+
+     height:600px;
   }
   
   .world-image-container {
