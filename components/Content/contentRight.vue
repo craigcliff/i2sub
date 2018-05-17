@@ -1,47 +1,28 @@
 <template>
-  <div class = "container-world" id="world">
-
-
+  <div class="container-content" id="content">
   
-       <div class="world-image-container">
-      <div class="world-image">
-        <img src="~/assets/geo1.jpg"  >
+    <div class="content-image-container">
+      <div class="content-image">
+        <img :src="pageImage">
+  
       </div>
-      <div class="world-image-cover"> </div>
+      <div class="content-image-cover"> </div>
     </div>
   
-    <div class="world-info">
+    <div class="content-info">
   
   
-      <div class="world-info-heading-container">
+      <div class="content-info-heading-container">
   
-        <div class="world-info-heading">
-         Worldwide Strength 
+        <div class="content-info-heading">
+          {{title}}
         </div>
   
-        <div class="world-info-line"></div>
+        <div class="content-info-line"></div>
       </div>
-     <p class="world-info-description">
+      <p class="content-info-description">
   
-       Lorem ipsum dolor sit amet, vix in omnium doctus inimicus. Agam invenire praesent per et, natum percipitur cu qui. Eu noster dignissim vis, nec ne tempor essent antiopam. Id pri novum prompta aliquando, commodo equidem detracto te vix, has id exerci postulant gubergren. No nisl ceteros ullamcorper per, perfecto comprehensam ad has, est ei dicit graece petentium. Vis minim ornatus voluptatibus ad, eos ut nusquam constituam, mel quis cetero ei.
-      Lorem ipsum dolor sit amet, vix in omnium doctus inimicus. Agam invenire praesent per et, natum percipitur cu qui. Eu noster dignissim vis, nec ne tempor essent antiopam. Id pri novum prompta aliquando, commodo equidem detracto te vix, has id exerci postulant gubergren. No nisl ceteros ullamcorper per, perfecto comprehensam ad has, est ei dicit graece petentium. Vis minim ornatus voluptatibus ad, eos ut nusquam constituam, mel quis cetero ei.
-      
-  
-  
-      </p>
-  
-  <p class="world-info-description">
-  
-       Lorem ipsum dolor sit amet, vix in omnium doctus inimicus. Agam invenire praesent per et, natum percipitur cu qui. Eu noster dignissim vis, nec ne tempor essent antiopam. Id pri novum prompta aliquando, commodo equidem detracto te vix, has id exerci postulant gubergren. No nisl ceteros ullamcorper per, perfecto comprehensam ad has, est ei dicit graece petentium. Vis minim ornatus voluptatibus ad, eos ut nusquam constituam, mel quis cetero ei.
-      Lorem ipsum dolor sit amet, vix in omnium doctus inimicus. Agam invenire praesent per et, natum percipitur cu qui. Eu noster dignissim vis, nec ne tempor essent antiopam. Id pri novum prompta aliquando, commodo equidem detracto te vix, has id exerci postulant gubergren. No nisl ceteros ullamcorper per, perfecto comprehensam ad has, est ei dicit graece petentium. Vis minim ornatus voluptatibus ad, eos ut nusquam constituam, mel quis cetero ei.
-      
-  
-  
-      </p>
-  
-  <p class="world-info-description">
-  
-       Lorem ipsum dolor sit amet, vix in omnium doctus inimicus. Agam invenire praesent per et, natum percipitur cu qui. Eu noster dignissim vis, nec ne tempor essent antiopam. Id pri novum prompta aliquando, commodo equidem detracto te vix, has id exerci postulant gubergren. No nisl ceteros ullamcorper per, perfecto comprehensam ad has, est ei dicit graece petentium. Vis minim ornatus voluptatibus ad, eos ut nusquam constituam, mel quis cetero ei.
+        {{desc}}
   
   
   
@@ -52,12 +33,11 @@
     </div>
   
   
-</div>
-
   
-
+  
+  
+  </div>
 </template>
-
 
 <script>
   import {
@@ -86,9 +66,9 @@
     watch: {
       visible(visible) {
         if (visible && !this.animated) {
-          // const { camera, world, title, copy } = this.$refs
+          // const { camera, content, title, copy } = this.$refs
           // TweenMax.to(camera, .6, { opacity: 1, scale: 1, ease: Expo.easeOut })
-          // TweenMax.to(world, .6, { scaleY: 1, ease: Expo.easeOut })
+          // TweenMax.to(content, .6, { scaleY: 1, ease: Expo.easeOut })
           // TweenMax.to([title, copy], .5, { delay: .4, opacity: 1 })
   
           this.staggerServices();
@@ -123,7 +103,7 @@
     mounted() {
       this.$store.commit("navStateTrue");
       this.getWidth();
-      // this.tl.set(".world-info-line",{height:"2px"})
+      // this.tl.set(".content-info-line",{height:"2px"})
   
     },
   
@@ -134,42 +114,42 @@
   
   
   
-        this.tl.to(".world-info-line", duration, {
+        this.tl.to(".content-info-line", duration, {
   
             opacity: 1
           })
           //increase size of clipPath to reveal text
-          .to(".world-info-heading", duration, {
+          .to(".content-info-heading", duration, {
             clipPath: "inset(0px 0px 0% 1px)",
             ease: Linear.easeNone
           }, "reveal")
           //move line down at same speed at the same time
-          .to(".world-info-line", duration, {
-            top: "-3px",
+          .to(".content-info-line", duration, {
+            top: "-5px",
             ease: Linear.easeNone
           }, "reveal")
           //shrink the line
-          .to(".world-image-cover", 0.5, {
+          .to(".content-image-cover", 0.5, {
             opacity: 1
   
           })
-          .from(".world-image-cover", 0.5, {
+          .from(".content-image-cover", 0.5, {
             scaleX: 0,
             transformOrigin: "right"
           })
-          .to(".world-image-cover", 0.5, {
+          .to(".content-image-cover", 0.5, {
             scaleX: 0,
             transformOrigin: "left",
   
           }, "reveal2")
-          .to(".world-image", duration, {
+          .to(".content-image", duration, {
             opacity: 1
           }, "reveal2")
   
-          .from(".world-image", duration, {
+          .from(".content-image", duration, {
             opacity: 0
           }, "reveal2")
-          .to(".world-info-description", duration, {
+          .to(".content-info-description", duration, {
             opacity: 1,
             transformOrigin: "left"
           }, "reveal2");
@@ -177,7 +157,7 @@
   
       },
       getWidth: function() {
-        var box = document.querySelector('.world-info-heading');
+        var box = document.querySelector('.content-info-heading');
         var width = box.offsetWidth;
         console.log("the width is " + width);
   
@@ -195,17 +175,14 @@
 
 
 <style scoped lang="scss">
-
-
-  .container-world {
- 
+  .container-content {
+    min-height: 90vh;
     display: flex;
     flex-direction: row;
-  padding: 0px 50px;
-     margin-top:30px;
+    padding: 50px 50px;
   }
   
-  .world-image-container {
+  .content-image-container {
     flex: 1;
     height: 600px;
     margin-right: 50px;
@@ -217,7 +194,7 @@
     width: 100%;
   }
   
-  .world-image {
+  .content-image {
     // background-image: url("~/assets/content1.jpg");
     // background-position: center;
     // background-repeat: no-repeat;
@@ -236,12 +213,12 @@
     }
   }
   
-  .world-info-heading-container {
+  .content-info-heading-container {
     display: inline-flex;
   flex-direction: column;
   }
   
-  .world-info {
+  .content-info {
     // width: 50%;
     // display: flex;
     // flex-direction: column;
@@ -274,7 +251,7 @@
     &-line {
       
      
-      height: 6px;
+      height: 10px;
       background-color: $color-primary;
       z-index: 0;
       opacity: 0;
@@ -304,7 +281,7 @@
       font-size: 12px;
       line-height: 14px;
       letter-spacing: .02em;
-      margin-top: 30px;
+      margin-top: 80px;
       opacity: 0;
       @include respond(big-desktop) {
         font-size: 14px;
@@ -314,5 +291,10 @@
     }
   }
   
-
+  .heading {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 </style>

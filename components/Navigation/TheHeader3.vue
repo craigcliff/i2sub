@@ -30,7 +30,7 @@
               <nuxt-link to="/about/#what" v-scroll-to="'.container-what'">What we do</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/about/#worldwide" v-scroll-to="'.container-worldwide'">Worldwide Strength</nuxt-link>
+              <nuxt-link to="/about/#world" v-scroll-to="'.container-world'">Worldwide Strength</nuxt-link>
             </li>
   
           </ul>
@@ -239,6 +239,7 @@
     //   transition: all 0.5s ease-in;
     position: fixed;
     z-index: 400;
+     box-shadow: .8px .9px 10px grey;
     // @include respond(tab-port) {
     //     flex-direction: column;
     //     height: 100vh;

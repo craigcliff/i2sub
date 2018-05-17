@@ -1,5 +1,6 @@
 <template>
   <div class="container-services" id="services">
+    
     <section class="services-main">
       <h1 class="services-heading">Our Services</h1>
   
@@ -239,13 +240,16 @@
   
   
   
-  
+
   
     <drilling/>
     <water/>
     <geotechnical/>
+       
     <subsurface/>
     <oilandgas/>
+ 
+
   
   
   </div>
@@ -257,6 +261,8 @@
   import geotechnical from "@/pages/services/geotechnical.vue";
   import subsurface from "@/pages/services/subsurface.vue";
   import oilandgas from "@/pages/services/oilgas.vue";
+  
+ 
   import {
     TweenMax
   } from "gsap";
@@ -337,7 +343,7 @@
     align-items: flex-end;
     justify-content: center;
     padding: 15px 25px;
-    
+    margin-top: 60px;
     margin-bottom: 20px;
     font-family: Miller-text, helvetica;
     font-weight: 400;

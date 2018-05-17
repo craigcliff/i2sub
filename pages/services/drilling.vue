@@ -21,14 +21,15 @@ export default {
 
 .container-drilling{
 
+height: 100vh;
+
   min-height: 100vh;
-  width:60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("~/assets/drilling1.jpg");
+  background-image: linear-gradient(to top right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),url("~/assets/geo1.jpg");
   background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

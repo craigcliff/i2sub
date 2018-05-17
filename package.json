@@ -14,7 +14,8 @@
     "gsap": "^1.20.4",
     "nuxt": "^1.0.0",
     "nuxt-sass-resources-loader": "^2.0.0",
-    "vue-scrollto": "^2.11.0"
+    "vue-scrollto": "^2.11.0",
+    "vue-scrollview": "^3.0.1"
   },
   "devDependencies": {
     "cross-env": "^5.1.4",

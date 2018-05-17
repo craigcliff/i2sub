@@ -376,6 +376,7 @@ z-index:2000;
           .to(panel + '-heading', .5, {
             y: 10,
             autoAlpha: 1,
+           
             ease: Linear.easeOutIn
           })
           .to(panel + '-desc', .5, {
