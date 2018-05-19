@@ -267,7 +267,7 @@
       text-align: left;
       
     // position:absolute;
-      line-height: 42px;
+      
       clip-path: inset(0px 0px 100% 1px);
        
   

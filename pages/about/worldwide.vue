@@ -202,7 +202,7 @@
     display: flex;
     flex-direction: row;
   padding: 0px 50px;
-     margin-top:100px;
+    //  margin-top:100px;
 
      height:600px;
   }
@@ -267,7 +267,7 @@
       text-align: left;
       
     // position:absolute;
-      line-height: 42px;
+      // line-height: 42px;
       clip-path: inset(0px 0px 100% 1px);
        
   
