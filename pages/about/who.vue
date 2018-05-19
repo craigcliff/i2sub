@@ -203,6 +203,12 @@
     padding: 0px 50px;
     height:600px;
     // margin-top: 100px;
+
+      @include respond(big-desktop) {
+margin-top:100px;
+
+
+  }
     
   }
   
